@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/global.css" type="text/css">
     <link rel="stylesheet" href="css/media-queries.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700" rel="stylesheet">
+    </head>   
 <body>
     <div id="wrapper"> 
        
@@ -36,20 +37,118 @@
             <span></span>
         </div><!-- FIN BURGER -->
         
-        <div id="typed">
-            
-        </div> 
+        <div id="typing"> <!-- ACCROCHE -->
+            <span class="element"></span>
+        </div> <!-- FIN ACCROCHE -->
+
+        
           
-        <div id="planet">
+        <div id="planets"> <!-- PLANETES -->
+            
+            <div id="globalSun"> <!-- SUN -->
+                <p>Soleil</p>
+                <div id="sun" class="systeme"> 
+                    <div id="sunHover"></div>
+                </div>
+            </div>
+            
+            <div id="globalMercury"><!-- MERCURY -->
+                <p>Mercure</p>
+                <div id="mercury" class="systeme"> 
+                    <div id="mercuryHover"></div>
+                </div>
+            </div>
+            
+            <div id="globalVenus"> <!--VENUS -->
+                <p>Venus</p>
+                <div id="venus" class="systeme"> 
+                    <div id="venusHover"></div>
+                </div>
+            </div>
+            
+            <div id="globalEarth"> <!--EARTH -->
+                <p>Terre</p>
+                <div id="earth" class="systeme"> 
+                    <div id="earthHover">
+                        <div id="moon"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="globalMars"> <!--MARS -->
+                <p>Mars</p>
+                <div id="mars" class="systeme"> 
+                    <div id="marsHover">
+                        <div id="phobos"></div>
+                        <div id="deimos"></div>
+                    </div>
+                </div> 
+            </div>
+            
+            <div id="globalJupiter"><!--JUPITER -->
+                <p>Jupiter</p>
+                <div id="jupiter" class="systeme"> 
+                    <div id="jupiterHover">
+                        <div id="europe"></div>
+                        <div id="io"></div>
+                        <div id="ganymede"></div>
+                        <div id="callisto"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="globalSaturn"><!--SATURNE -->
+                <p>Saturn</p>
+                <div id="saturn" class="systeme">
+                    <div id="Sring">
+                        <div id="saturnHover">
+                            <div id="titan"></div>
+                            <div id="encelade"></div>
+                            <div id="mimas"></div>
+                            <div id="tethys"></div>
+                            <div id="dione"></div>
+                            <div id="rhea"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="globalUranus"><!--URANUS -->
+                <p>Uranus</p>
+                <div id="uranus" class="systeme">
+                    <div id="Uring">
+                        <div id="uranusHover">
+                            <div id="titania"></div>
+                            <div id="ariel"></div>
+                            <div id="miranda"></div>
+                            <div id="umbriel"></div>
+                            <div id="oberon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="globalNeptune"><!--NEPTUNE -->
+                <p>Neptune</p>
+                <div id="neptune" class="systeme">
+                    <div id="neptuneHover">
+                        <div id="triton"></div>
+                    </div>
+                </div>
+            </div>
             
         </div>
     
-    
+    <footer>
+        <p>
+            ©milkyway 2016 - mentions légales - plan du site
+        </p>
+    </footer>
     
     </div>
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+      <script src="js/jquery.js"></script>
     <script src="js/TweenMax.min.js"></script>
-    <script src="typed.js"></script>
+    <script src="js/typed.js"></script>
     <script src="js/moteur.js"></script>
 </body>
 </html>
