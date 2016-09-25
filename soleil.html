@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no">
+    <title>milkyway - Soleil</title>
+    <meta name="description" content="Site sur l'astronomie, le systeme solaire. Explorer l'espace comme un astronaute">
+    <meta name="keywords" content="astronomie, espace, univers, planète, systeme solaire, explorer, decouvrir">
+    <meta name="author" content="Castano Cindy">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/planet.css" type="text/css">
+    <link rel="stylesheet" href="css/media-queries.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700" rel="stylesheet">
+</head>
+<body>
+   <div id="wrapper">
+    <div id="logo"> <!-- LOGO -->
+        <a href="index.html"><img src="images/logowhite.png" alt="logo milkyway"></a>
+    </div>
+    
+    <div id="typing"> <!-- ACCROCHE -->
+            <span class="element"></span>
+        </div> <!-- FIN ACCROCHE -->
+        
+    <nav class="float-menu">
+            <input type="checkbox" class="menu-open" id="menu-open" />
+            <label class="menu-open-button" for="menu-open">
+                <span class="burger"></span>
+            </label>
+            <a href="#" class="nav-item"><i class="fa fa-arrows-h"></i>Galaxies</a>
+            <a href="#" class="nav-item"><i class="fa fa-plus"></i>médias</a>
+            <a href="#" class="nav-item"><i class="fa fa-heart"></i>
+                <div class="cntr">
+	                <div class="cntr-innr">
+                        <label class="search" for="inpt_search">
+			                <input id="inpt_search" type="text"/>
+                        </label>
+	                </div>
+                </div></a>
+            <a href="#" class="nav-item"><i class="fa fa-bookmark"></i>histoire</a>
+            <a href="#" class="nav-item"><i class="fa fa-bookmark"></i>news</a>
+        </nav>
+        <a href="mercure.html">
+            <div id="rightArrow">
+               <span></span>
+               <span></span>
+           </div>
+        </a>
+
+    <div id="soleil"></div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/three.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/soleil.js"></script>
+</body>
+</html>
