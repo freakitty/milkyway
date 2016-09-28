@@ -92,7 +92,7 @@ function animate() {
 }
 function logoDown() {
     "use strict";
-    TweenMax.to('#logo', 0.3, {top: '30px'});
+    TweenMax.to('#logo', 0.3, {top: '10px'});
 }
 function logoUp() {
     "use strict";

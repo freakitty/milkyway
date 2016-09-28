@@ -90,7 +90,7 @@ function animate() {
   renderer.render( scene, camera )
 };
 function logoDown() {
-    TweenMax.to('#logo', 0.3, {top: '30px'});
+    TweenMax.to('#logo', 0.3, {top: '10px'});
 }
 function logoUp() {
     TweenMax.to('#logo', 0.6, {top: '-20px'});

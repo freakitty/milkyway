@@ -20,15 +20,34 @@
 }
 
 @media screen and (max-width:480px){
-    #logo{top: 10px;}
-    #typing{top: 20%;}
+    #button{left: 145px;}
+    #closeId{top: -95%;}
+    #idInfos{width: 250px;left: -77%;top: -90%;}
+    #closeGravite{top: 43%;left: 97%;}
+    #graviteInfos{margin-left: 4%;width: 137px;}
+    #tempInfos{width: 190px;margin-left: -75px;}
+    #closeTemp{top: 53%;left: -1%}
+    #masseInfos{width: 180px;}
+    #closeMasse{top: -35%;}
+    .infosPlanet{font-size: 0.6em;}
     .element{font-size:0.7em;}
-    body{overflow-y: scroll;}
-    #wrapper{background: #OOO;height: 200vh;}
-    #planets{max-width: 20%;}
     footer{bottom: -98%; width: 300px;}
-    .systeme{margin: 25px} 
-    
+    #rightArrow{right: 55px;}
+    #rightArrow span{width: 50px; height: 9px;}
+    #leftArrow span{width: 50px; height: 9px;}
+    #rightArrow span:first-child{
+    transform: translateY(-15px) rotate(45deg);
+}
+#rightArrow span:last-child{
+    transform:translateY(15px) rotate(-45deg);
+}
+    #leftArrow span:first-child{
+    transform: translateY(-15px) rotate(135deg);
+}
+#leftArrow span:last-child{
+    transform:translateY(15px) rotate(-135deg);
+}
+    #pointer{width: 150px; height: 150px;}
 }
 @media screen and (max-width:400px){
     .nav-item, .menu-open-button {width: 40px; height: 40px; top: 10px; right: 20px;}
@@ -59,9 +78,7 @@
     .search:after{top: 14px; right: -3px;}
 }
 @media screen and (max-width:320px){
-    #wrapper{height: 240vh;}
     footer{bottom: -135%;}
     .element{font-size: 0.5em;}
-    .systeme{margin: 20px;}
 
 }
