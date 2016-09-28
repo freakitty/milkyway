@@ -279,7 +279,8 @@ PLANETS
     -ms-flex-flow: row wrap;
     -o-flex-flow: row wrap;
     justify-content: space-around;
-    align-items: center;    
+    align-items: center;   
+    max-width: 80%;
 }
 .systeme{
     margin: 20px;  
@@ -1406,7 +1407,7 @@ Footer
 
 footer{
     position: absolute;
-    bottom: 10px;
+    bottom: 3%;
     left: 50%;
     transform: translateX(-50%);
     color: #fff;

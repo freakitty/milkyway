@@ -59,8 +59,8 @@
     .search:after{top: 14px; right: -3px;}
 }
 @media screen and (max-width:320px){
-    #wrapper{height: 240vh;}
-    footer{bottom: -135%;}
+    #wrapper{height: 255vh;}
+    footer{bottom: -148%;}
     .element{font-size: 0.5em;}
     .systeme{margin: 20px;}
 
