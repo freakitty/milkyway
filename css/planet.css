@@ -12,9 +12,12 @@ body{font-family: 'Roboto Mono'; overflow: hidden;}
 
 #logo{
     position: absolute;
-    top: -50px;
+    top: -20px;
     left: 50%;
     transform: translateX(-50%);
+}
+#logo a img{
+    width: 85%;
 }
 /********************************
 Navigation
@@ -91,6 +94,7 @@ Navigation
     position: absolute;
     top: 20px;
     right: 30px;
+    z-index: 50;
     text-align: center;
     -webkit-transition: -webkit-transform ease-out 200ms;
     transition: -webkit-transform ease-out 200ms;
@@ -108,13 +112,13 @@ Navigation
     padding-top: 12px;
     text-decoration: none;
     text-transform: uppercase;
+    display: block;
 }
 .nav-item:hover {
     background: #ccc;
 }
-.nav-item .fa {
-    display: block;
-    font-size: 36px;
+.nav-item img{
+    margin: -6px 5px;
 }
 
 .burger {
@@ -149,7 +153,7 @@ Navigation
 }
 
 .menu-open-button {
-    z-index: 5;
+    z-index: 60;
     -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     -webkit-transition-duration: 400ms;
@@ -248,14 +252,152 @@ Typed
 }
 #typing{
     position: absolute;
-    top: 150px;
-    left: 100px;
+    top: 15%;
+    left: 10%;
     max-width: 65%;
 }
 .element{
     color: #fff;
     font-size: 0.9em;
     font-weight: 300;
+}
+
+/*********
+MAP POINTER
+*********/
+.mapPointer{
+    width: 30px;
+}
+#pointer{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-animation: jump 2s ease-in-out infinite;
+    -moz-animation: jump 2s ease-in-out infinite;
+    -ms-animation: jump 2s ease-in-out infinite;
+    -o-animation: jump 2s ease-in-out infinite;
+    animation: jump 2s ease-in-out infinite; 
+    cursor: pointer;
+}
+@-webkit-keyframes jump{
+    from{-webkit-transform:translate(0,0); opacity:1}
+    50%{-webkit-transform:translate(0,-5px); opacity:1}
+    to{-webkit-transform:translate(0,0); opacity:1;}
+}
+.shadow{
+    border: 1px solid #000;
+    opacity: 0.5;
+    width: 15px;
+    height: 2px;
+    border-radius: 50%;
+    position: relative;
+    left: 8px;
+    background-color:#000;
+    padding: 2px;
+    -webkit-animation: pulse 2s ease-in-out infinite;
+    -moz-animation: pulse 2s ease-in-out infinite;
+    -ms-animation: pulse 2s ease-in-out infinite;
+    -o-animation: pulse 2s ease-in-out infinite;
+    animation: pulse 2s ease-in-out infinite;
+  }
+@-webkit-keyframes pulse {
+    from{-webkit-transform :scale(1,1);}
+    50%{-webkit-transform :scale(0.5,0.5);}
+    to{-webkit-transform :scale(1,1);}
+}
+.infosPlanet{
+    background-color: rgba(255,255,255,0.7);
+    font-size: 0.8em;
+    padding: 9px;
+    border-radius: 5px;
+    display: none;
+    opacity: 0;
+}
+
+#masse{
+    position: absolute;
+    top: -70%;
+    left: -40%;
+    width: 30px;
+}
+#closeMasse{
+    position: absolute;
+    top: -44%;
+    left: 19%;
+    display: none;
+}
+#masseInfos{
+    width: 210px;
+    margin: 10px -80px;
+}
+
+#temperature{
+    position: absolute;
+    top: 20%;
+    left: -70%;
+    width: 30px;
+}
+#tempInfos{
+    width: 250px;
+    margin: 10px -100px;
+}
+#closeTemp{
+    position: absolute;
+    top: 46%;
+    left: -2%;
+    display: none;
+}
+
+#gravite{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+#graviteInfos{
+    margin-top: 10px;
+}
+#closeGravite{
+    position: absolute;
+    top: 36%;
+    left: 94%;
+    display: none;
+}
+#idCarte{
+    position: absolute;
+    top: -20%;
+    left: 50%;
+}
+#idInfos{
+    position: absolute;
+    width: 350px;
+    top: -85%;
+    left: -85%;
+}
+#closeId{
+    position: absolute;
+    top: -89%;
+    left: 84%;
+    display: none;
+}
+#button{
+    position: relative;
+    left: 240px;  
+    background-color: #fff;
+    padding: 0 5px 2px 5px;
+    border-radius: 5px;
+    font-size: 0.5em;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    color: #ff00f0;
+    transition: all 0.3s ease;
+}
+#button:hover{
+    background-color: #ccc;
+    color: #000;
+    
 }
 
 /*********
@@ -267,7 +409,7 @@ ARROW
     top: 50%;
     transform: translateY(-50%);
     width: 80px;
-    right: 20px;
+    right: 80px;
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-duration: .4s;
 }
@@ -294,7 +436,7 @@ ARROW
     top: 50%;
     transform: translateY(-50%);
     width: 80px;
-    left: 20px;
+    left: 80px;
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-duration: .4s;
 }

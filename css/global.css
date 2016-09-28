@@ -12,11 +12,11 @@ body{font-family: 'Roboto Mono'; overflow: hidden;}
     left: 50%;
     transform: translateX(-50%);
 }
-
+#logo a img{width: 90%;}
 /********************************
 Navigation
 ********************************/
-
+/****** search *****/
 .cntr {
     display: table;
     width: 100%;
@@ -75,6 +75,7 @@ Navigation
     outline-width: 0px;
     margin-left: 3px;
 }
+/******* burger *********/
 * {
   box-sizing: border-box;
 }
@@ -88,6 +89,7 @@ Navigation
     position: absolute;
     top: 20px;
     right: 30px;
+    z-index: 50;
     text-align: center;
     -webkit-transition: -webkit-transform ease-out 200ms;
     transition: -webkit-transform ease-out 200ms;
@@ -105,24 +107,15 @@ Navigation
     padding-top: 12px;
     text-decoration: none;
     text-transform: uppercase;
+    display: block;
 }
 .nav-item:hover {
     background: #ccc;
 }
-.nav-item {
-    display: block;
-}
 .nav-item img{
-    margin-top: -6px;
+    margin: -6px 5px;
 }
-.nav-item p{
-    color: #fff;
-    position: absolute;
-    top: 20px;
-    left: -42px;
-    text-align: right;
-    
-}
+
 .burger {
     background: #00ffe4;
     display: block;
@@ -155,7 +148,7 @@ Navigation
 }
 
 .menu-open-button {
-    z-index: 5;
+    z-index: 60;
     -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     -webkit-transition-duration: 400ms;
@@ -254,8 +247,8 @@ Typed
 }
 #typing{
     position: absolute;
-    top: 230px;
-    left: 100px;
+    top: 25%;
+    left: 10%;
     max-width: 65%;
 }
 .element{

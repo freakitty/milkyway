@@ -1,0 +1,79 @@
+@media screen and (min-width:801px){ 
+
+}
+
+@media screen and (max-width:1280px){
+}
+
+@media screen and (max-width:1080px){
+}
+
+@media screen and (max-width:960px){}
+@media screen and (max-width:800px){    
+}
+@media screen and (max-width:768px){
+    #rightArrow{top: 85%;}
+    #leftArrow{top: 85%;}
+}
+
+@media screen and (max-width:600px){
+}
+
+@media screen and (max-width:480px){
+    .element{font-size:0.7em;}
+    #wrapper{background: #OOO;height: 200vh;}
+    body{overflow-y: scroll;}
+    #planets{max-width: 20%;}
+    footer{bottom: -98%; width: 300px;}
+    .systeme{margin: 25px} 
+    #rightArrow{right: 55px;}
+    #rightArrow span{width: 50px; height: 9px;}
+    #leftArrow span{width: 50px; height: 9px;}
+    #rightArrow span:first-child{
+    transform: translateY(-15px) rotate(45deg);
+}
+#rightArrow span:last-child{
+    transform:translateY(15px) rotate(-45deg);
+}
+    #leftArrow span:first-child{
+    transform: translateY(-15px) rotate(135deg);
+}
+#leftArrow span:last-child{
+    transform:translateY(15px) rotate(-135deg);
+}
+}
+@media screen and (max-width:400px){
+    .nav-item, .menu-open-button {width: 40px; height: 40px; top: 10px; right: 20px;}
+    .menu-open:checked ~ .nav-item:nth-child(3) {
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+}
+.menu-open:checked ~ .nav-item:nth-child(4) {
+    -webkit-transform: translate3d(0, 90px, 0);
+    transform: translate3d(0, 90px, 0);
+}
+.menu-open:checked ~ .nav-item:nth-child(5) {
+    -webkit-transform: translate3d(0, 140px, 0);
+    transform: translate3d(0, 140px, 0);
+}
+.menu-open:checked ~ .nav-item:nth-child(6) {
+    -webkit-transform: translate3d(0, 190px, 0);
+    transform: translate3d(0, 190px, 0);
+}
+.menu-open:checked ~ .nav-item:nth-child(7) {
+    -webkit-transform: translate3d(0, 240px, 0);
+    transform: translate3d(0, 240px, 0);
+}
+    .burger{
+        width: 60px;
+    }
+    .search{width: 20px; height: 20px;}
+    .search:after{top: 14px; right: -3px;}
+}
+@media screen and (max-width:320px){
+    #wrapper{height: 240vh;}
+    footer{bottom: -135%;}
+    .element{font-size: 0.5em;}
+    
+
+}

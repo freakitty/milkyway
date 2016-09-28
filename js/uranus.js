@@ -38,11 +38,11 @@ function init() {
             shading: THREE.FlatShading
         });
 
-    for (var i = 0; i < 300; i++) {
+    for (var i = 0; i < 500; i++) {
         var mesh = new THREE.Mesh(geometry, material);
-        mesh.position.set(Math.random() - 0.5, Math.random() - 0, Math.random() - 0.5, Math.random() - 0).normalize();
-        mesh.position.multiplyScalar(90 + (Math.random() * 100));
-        mesh.rotation.set(Math.random() * 1, Math.random() * 1, Math.random() * 1, Math.random() * 1);
+        mesh.position.set(Math.random() - 0.5, Math.random() - 0.5, (Math.random() - 0.5) * 0.01).normalize();
+        mesh.position.multiplyScalar(150 + (Math.random() * 80));
+        mesh.rotation.set(Math.random() * 360, Math.random() * 360, Math.random() * 360);
         particle.add(mesh);
     }
 
@@ -111,7 +111,7 @@ function logoDown() {
 }
 function logoUp() {
     "use strict";
-    TweenMax.to('#logo', 0.6, {top: '-50px'});
+    TweenMax.to('#logo', 0.6, {top: '-20px'});
 }
 $('#logo').mouseover(function (){
     "use strict";
@@ -124,7 +124,7 @@ $('#logo').mouseout(function () {
 $(function () {
     "use strict";
     $(".element").typed({
-        strings: ["Bienvenue sur Uranus,", "cliquer sur les points repère pour explorer la planète."],
+        strings: ["Bienvenue sur Uranus,", "cliquez sur les points repère pour explorer la planète."],
         typeSpeed: 30
     });
     $("#inpt_search").on('focus', function () {
@@ -135,5 +135,93 @@ $(function () {
         if ($(this).val().length === 0){
             $(this).parent('label').removeClass('active');
         }
+    });
+        /****** INFOS PLANET *********/
+    
+    /***MASSE***/
+    function openMasse() {
+        $('#masseInfos').css('display', 'block');
+        $('#masseInfos').animate({opacity : 1});
+        $('#closeMasse').css('display','block');
+        $('#closeMasse').animate({opacity : 1});
+        
+    }
+    $('#masse').click(function () {
+        openMasse();
+    });
+    function closeMasse() {
+        $('#masseInfos').css('display', 'none');
+        $('#masseInfos').animate({opacity : 0});
+        $('#closeMasse').css('display','none');
+        $('#closeMasse').animate({opacity : 0});
+    }
+    $('#closeMasse').click(function () {
+        closeMasse();
+    });
+    
+    /***TEMPERATURE***/
+    function openTemp() {
+        $('#tempInfos').css('display', 'block');
+        $('#tempInfos').animate({opacity : 1});
+        $('#closeTemp').css('display','block');
+        $('#closeTemp').animate({opacity : 1});
+        
+    }
+    $('#temperature').click(function () {
+        openTemp();
+    });
+    function closeTemp() {
+        $('#tempInfos').css('display', 'none');
+        $('#tempInfos').animate({opacity : 0});
+        $('#closeTemp').css('display','none');
+        $('#closeTemp').animate({opacity : 0});
+    }
+    $('#closeTemp').click(function () {
+        closeTemp();
+    });
+    
+    /***GRAVITE***/
+    function openGrav() {
+        $('#graviteInfos').css('display', 'block');
+        $('#graviteInfos').animate({opacity : 1});
+        $('#closeGravite').css('display','block');
+        $('#closeGravite').animate({opacity : 1});
+        
+    }
+    $('#gravite').click(function () {
+        openGrav();
+    });
+    function closeGrav() {
+        $('#graviteInfos').css('display', 'none');
+        $('#graviteInfos').animate({opacity : 0});
+        $('#closeGravite').css('display','none');
+        $('#closeGravite').animate({opacity : 0});
+    }
+    $('#closeGravite').click(function () {
+        closeGrav();
+    });
+    
+    /***IDCARD***/
+    function openId() {
+        $('#idInfos').css('display', 'block');
+        $('#idInfos').animate({opacity : 1});
+        $('#closeId').css('display','block');
+        $('#closeId').animate({opacity : 1});
+        
+    }
+    $('#idCarte').click(function () {
+        openId();
+        closeGrav();
+        closeMasse();
+        closeTemp();
+    });
+    function closeId() {
+        $('#idInfos').css('display', 'none');
+        $('#idInfos').animate({opacity : 0});
+        $('#closeId').css('display','none');
+        $('#closeId').animate({opacity : 0});
+    }
+    $('#closeId').click(function () {
+        closeId();
     });
 });
