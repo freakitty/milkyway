@@ -21,8 +21,8 @@
 
 @media screen and (max-width:480px){
     #button{left: 145px;}
-    #closeId{top: -95%;left: 77%;}
-    #idInfos{width: 250px;left: -84%;top: -90%;z-index: 99;}
+    #closeId{top: -95%;left: 77%;z-index: 99;}
+    #idInfos{width: 250px;left: -84%;top: -90%;z-index: 90;}
     #closeGravite{top: 43%;left: 97%;}
     #graviteInfos{margin-left: 4%;width: 137px;}
     #tempInfos{width: 190px;margin-left: -75px;}

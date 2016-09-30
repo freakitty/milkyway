@@ -17,21 +17,21 @@ body{font-family: 'Roboto Mono';overflow: hidden;}
 Navigation
 ********************************/
 /****** search *****/
-.cntr {
+.cntr{
     display: table;
     width: 100%;
     height: 100%;
 }
-.cntr .cntr-innr {
+.cntr .cntr-innr{
     display: table-cell;
     text-align: center;
     vertical-align: middle;
 }
-.search {
+.search{
     display: inline-block;
     position: relative;
-    top: -9px;
-    right: 2px;
+    top: -3px;
+    right: -6px;
     height: 25px;
     width: 25px;
     box-sizing: border-box;
@@ -41,7 +41,7 @@ Navigation
     transition: all 200ms ease;
     cursor: text;
 }
-.search:after {
+.search:after{
     content: "";
     position: absolute;
     width: 2px;
@@ -55,15 +55,15 @@ Navigation
     -webkit-transition: all 200ms ease;
     transition: all 200ms ease;
 }
-.search.active, .search:hover {
+.search.active, .search:hover{
     width: 200px;
     right: 165px;
     border: 2px solid #ff00f0;
 }
-.search.active:after, .search:hover:after {
+.search.active:after, .search:hover:after{
     height: 0px;
 }
-.search input {
+.search input{
     font-family: 'Roboto Mono';
     font-weight: 300;
     font-size: 13px;
@@ -80,7 +80,7 @@ Navigation
   box-sizing: border-box;
 }
 
-.nav-item, .menu-open-button {
+.nav-item, .menu-open-button{
     background: #fff;
     border-radius: 100%;
     color: #000;
@@ -97,11 +97,11 @@ Navigation
     transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;  
 }
 
-.menu-open {
+.menu-open{
     display: none;
 }
 
-.nav-item {
+.nav-item{
     font-size: 8px;
     line-height: 14px;
     padding-top: 12px;
@@ -109,14 +109,11 @@ Navigation
     text-transform: uppercase;
     display: block;
 }
-.nav-item:hover {
+.nav-item:hover{
     background: #ccc;
 }
-.nav-item img{
-    margin: -6px 5px;
-}
 
-.burger {
+.burger{
     background: #00ffe4;
     display: block;
     height: 5px;
@@ -279,8 +276,7 @@ PLANETS
     -ms-flex-flow: row wrap;
     -o-flex-flow: row wrap;
     justify-content: space-around;
-    align-items: center;   
-    max-width: 80%;
+    align-items: center;  
 }
 .systeme{
     margin: 20px;  

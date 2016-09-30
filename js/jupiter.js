@@ -1,12 +1,6 @@
 /*global $, jQuery, TweenMax, THREE*/
 var renderer, scene, camera, composer, circle, skelet;
 
-window.onload = function () {
-    "use strict";
-    init();
-    animate();
-};
-
 function init() {
     "use strict";
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -14,6 +8,7 @@ function init() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.autoClear = false;
     renderer.setClearColor(0x000000, 0.0);
+    
     document.getElementById('jupiter').appendChild(renderer.domElement);
 
     scene = new THREE.Scene();
@@ -44,18 +39,22 @@ function init() {
             wireframe: true,
             side: THREE.DoubleSide
         }),
-        planet = new THREE.Mesh(geom, mat);
+        planet = new THREE.Mesh(geom, mat),
+        planet2 = new THREE.Mesh(geom2, mat2),
+        ambientLight = new THREE.AmbientLight(0x999999),
+        lights = [];
+    
     planet.scale.x = planet.scale.y = planet.scale.z = 16;
     circle.add(planet);
 
-    var planet2 = new THREE.Mesh(geom2, mat2);
+    
     planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
     skelet.add(planet2);
 
-    var ambientLight = new THREE.AmbientLight(0x999999);
+    
     scene.add(ambientLight);
   
-    var lights = [];
+    
     lights[0] = new THREE.DirectionalLight(0xffffff, 1);
     lights[0].position.set(1, 0, 0);
     lights[1] = new THREE.DirectionalLight(0x11E8BB, 1);
@@ -65,16 +64,14 @@ function init() {
     scene.add(lights[0]);
     scene.add(lights[1]);
     scene.add(lights[2]);
-
+    
+    function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    }
     window.addEventListener('resize', onWindowResize, false);
 
-}
-
-function onWindowResize() {
-    "use strict";
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
 function animate() {
@@ -90,9 +87,15 @@ function animate() {
     renderer.render(scene, camera);
 }
 
+window.onload = function () {
+    "use strict";
+    init();
+    animate();
+};
+
 function logoDown() {
     "use strict";
-    TweenMax.to('#logo', 0.3, {top: '30px'});
+    TweenMax.to('#logo', 0.3, {top: '10px'});
 }
 function logoUp() {
     "use strict";
@@ -128,7 +131,7 @@ $(function () {
     function openMasse() {
         $('#masseInfos').css('display', 'block');
         $('#masseInfos').animate({opacity : 1});
-        $('#closeMasse').css('display','block');
+        $('#closeMasse').css('display', 'block');
         $('#closeMasse').animate({opacity : 1});
         
     }
@@ -138,7 +141,7 @@ $(function () {
     function closeMasse() {
         $('#masseInfos').css('display', 'none');
         $('#masseInfos').animate({opacity : 0});
-        $('#closeMasse').css('display','none');
+        $('#closeMasse').css('display', 'none');
         $('#closeMasse').animate({opacity : 0});
     }
     $('#closeMasse').click(function () {
@@ -149,7 +152,7 @@ $(function () {
     function openTemp() {
         $('#tempInfos').css('display', 'block');
         $('#tempInfos').animate({opacity : 1});
-        $('#closeTemp').css('display','block');
+        $('#closeTemp').css('display', 'block');
         $('#closeTemp').animate({opacity : 1});
         
     }
@@ -159,7 +162,7 @@ $(function () {
     function closeTemp() {
         $('#tempInfos').css('display', 'none');
         $('#tempInfos').animate({opacity : 0});
-        $('#closeTemp').css('display','none');
+        $('#closeTemp').css('display', 'none');
         $('#closeTemp').animate({opacity : 0});
     }
     $('#closeTemp').click(function () {
@@ -170,7 +173,7 @@ $(function () {
     function openGrav() {
         $('#graviteInfos').css('display', 'block');
         $('#graviteInfos').animate({opacity : 1});
-        $('#closeGravite').css('display','block');
+        $('#closeGravite').css('display', 'block');
         $('#closeGravite').animate({opacity : 1});
         
     }
@@ -180,7 +183,7 @@ $(function () {
     function closeGrav() {
         $('#graviteInfos').css('display', 'none');
         $('#graviteInfos').animate({opacity : 0});
-        $('#closeGravite').css('display','none');
+        $('#closeGravite').css('display', 'none');
         $('#closeGravite').animate({opacity : 0});
     }
     $('#closeGravite').click(function () {
@@ -191,7 +194,7 @@ $(function () {
     function openId() {
         $('#idInfos').css('display', 'block');
         $('#idInfos').animate({opacity : 1});
-        $('#closeId').css('display','block');
+        $('#closeId').css('display', 'block');
         $('#closeId').animate({opacity : 1});
         
     }
@@ -204,7 +207,7 @@ $(function () {
     function closeId() {
         $('#idInfos').css('display', 'none');
         $('#idInfos').animate({opacity : 0});
-        $('#closeId').css('display','none');
+        $('#closeId').css('display', 'none');
         $('#closeId').animate({opacity : 0});
     }
     $('#closeId').click(function () {

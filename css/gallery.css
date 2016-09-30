@@ -1,0 +1,381 @@
+body{font-family: 'Roboto Mono';}
+
+#logo{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+}
+@media screen and (max-width:480px){
+    #logo{width: 50%;}
+}
+
+/********************************
+Navigation
+********************************/
+
+/****** search *****/
+.cntr {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.cntr .cntr-innr {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.search {
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    right: -6px;
+    height: 25px;
+    width: 25px;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 25px;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    cursor: text;
+}
+.search:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    right: -5px;
+    top: 18px;
+    background: #000;
+    border-radius: 3px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.search.active, .search:hover {
+    width: 200px;
+    right: 165px;
+    border: 2px solid #ff00f0;
+}
+.search.active:after, .search:hover:after {
+    height: 0px;
+}
+.search input {
+    font-family: 'Roboto Mono';
+    font-weight: 300;
+    font-size: 13px;
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    color: #fff;
+    background: transparent;
+    outline-width: 0px;
+    margin-left: 3px;
+}
+/******* burger *********/
+* {
+  box-sizing: border-box;
+}
+
+.nav-item, .menu-open-button {
+    background: #fff;
+    border-radius: 100%;
+    color: #000;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 50;
+    text-align: center;
+    -webkit-transition: -webkit-transform ease-out 200ms;
+    transition: -webkit-transform ease-out 200ms;
+    transition: transform ease-out 200ms;
+    transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;  
+}
+
+.menu-open {
+    display: none;
+}
+
+.nav-item {
+    font-size: 8px;
+    line-height: 14px;
+    padding-top: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+}
+.nav-item:hover {
+    background: #ccc;
+}
+.nav-item img{
+    margin: -6px 5px;
+}
+
+.burger {
+    background: #00ffe4;
+    display: block;
+    height: 5px;
+    width: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+}
+.burger:after, .burger:before {
+    background: #00ffe4;
+    content: "";
+    height: 5px;
+    width: 30px;
+    position: absolute;
+    right: 0;
+    -webkit-transition: -webkit-transform 200ms;
+    transition: -webkit-transform 200ms;
+    transition: transform 200ms;
+    transition: transform 200ms, -webkit-transform 200ms;
+}
+.burger:before {
+    top: -9px;
+}
+.burger:after {
+    top: 9px;
+}
+
+.menu-open-button {
+    z-index: 60;
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+    cursor: pointer;
+}
+.menu-open-button:hover {
+    background: #ccc;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.menu-open:checked + .menu-open-button {
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+}
+
+.menu-open:checked ~ .nav-item {
+    -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.menu-open:checked ~ .nav-item:nth-child(3) {
+    -webkit-transition-duration: 190ms;
+    transition-duration: 190ms;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+}
+.menu-open:checked ~ .nav-item:nth-child(4) {
+    -webkit-transition-duration: 290ms;
+    transition-duration: 290ms;
+    -webkit-transform: translate3d(0, 110px, 0);
+    transform: translate3d(0, 110px, 0);
+}
+.menu-open:checked ~ .nav-item:nth-child(5) {
+    -webkit-transition-duration: 390ms;
+    transition-duration: 390ms;
+    -webkit-transform: translate3d(0, 170px, 0);
+    transform: translate3d(0, 170px, 0);
+}
+.menu-open:checked ~ .nav-item:nth-child(6) {
+    -webkit-transition-duration: 490ms;
+    transition-duration: 490ms;
+    -webkit-transform: translate3d(0, 230px, 0);
+    transform: translate3d(0, 230px, 0);
+}
+.menu-open:checked ~ .nav-item:nth-child(7) {
+    -webkit-transition-duration: 590ms;
+    transition-duration: 590ms;
+    -webkit-transform: translate3d(0, 290px, 0);
+    transform: translate3d(0, 290px, 0);
+}
+
+.menu-open:checked + .menu-open-button .burger {
+    background-color: transparent;
+}
+.menu-open:checked + .menu-open-button .burger:before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.menu-open:checked + .menu-open-button .burger:after {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+/***************** 
+Queries menu
+******************/
+@media screen and (max-width:400px){
+    .nav-item, .menu-open-button {width: 40px; height: 40px; top: 10px; right: 20px;}
+    .menu-open:checked ~ .nav-item:nth-child(3) {
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+}
+.menu-open:checked ~ .nav-item:nth-child(4) {
+    -webkit-transform: translate3d(0, 90px, 0);
+    transform: translate3d(0, 90px, 0);
+}
+.menu-open:checked ~ .nav-item:nth-child(5) {
+    -webkit-transform: translate3d(0, 140px, 0);
+    transform: translate3d(0, 140px, 0);
+}
+.menu-open:checked ~ .nav-item:nth-child(6) {
+    -webkit-transform: translate3d(0, 190px, 0);
+    transform: translate3d(0, 190px, 0);
+}
+.menu-open:checked ~ .nav-item:nth-child(7) {
+    -webkit-transform: translate3d(0, 240px, 0);
+    transform: translate3d(0, 240px, 0);
+}
+    .burger{
+        width: 60px;
+    }
+    .search{width: 20px; height: 20px;}
+    .search:after{top: 14px; right: -3px;}
+}
+
+/***************
+GALLERY
+***************/
+
+#main {
+    background-color: #fff;
+    position: relative;
+    z-index: 20;
+    padding-top: 130px;
+    box-shadow: 2px 2px 4px #999;
+    -webkit-transition: -webkit-transform .6s ease;
+    transition: -webkit-transform .6s ease;
+    transition: transform .6s ease;
+    transition: transform .6s ease, -webkit-transform .6s ease;
+}
+@media (min-width: 640px) {
+    #main {padding: 1em; padding-top: 150px;}
+}
+#item1{
+    background: url(../images/gallery/Plutonian-haze.jpg);
+    background-size: cover;
+}
+#item2{
+    background: url(../images/gallery/Crescent%20earth.jpg);
+    background-size: cover;
+}
+#item3{
+    background: url(../images/gallery/io.jpg);
+    background-size: cover;
+}
+#item4{
+    background: url(../images/gallery/jupiter.jpg);
+    background-size: cover;
+}
+#item5{
+    background: url(../images/gallery/Neptune-triton.jpg);
+    background-size: cover;
+}
+#item6{
+    background: url(../images/gallery/Saturn-Sunlight.jpg);
+    background-size: cover;
+}
+#item7{
+    background: url(../images/gallery/Saturn-Tethys-Mimas.jpg);
+    background-size: cover;
+}
+#item8{
+    background: url(../images/gallery/lune.jpg);
+    background-size: cover;
+}
+#item9{
+    background: url(../images/gallery/mars.jpg);
+    background-size: cover;
+}
+#item10{
+    background: url(../images/gallery/Mimas-saturn.jpg);
+    background-size: cover;
+}
+#item11{
+    background: url(../images/gallery/Rhea-saturne.jpg);
+    background-size: cover;
+}
+#item12{
+    background: url(../images/gallery/eclipse-soleil.jpg);
+    background-size: cover;
+}
+.gallery {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 640px) {
+    .gallery li {
+    float: left;
+    width: 33.33%;
+  }
+}
+.items {
+    margin: 1em;
+    display: block;
+    padding-top: 73%;
+    cursor: pointer;
+}
+
+#aside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: #eee;
+    overflow: scroll;
+}
+#aside img {
+    width: 100%;
+    vertical-align: top;
+}
+#aside .wrapper {
+    padding: 1em;
+}
+#aside .close {
+    width: 25px;
+    display: block;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.show-detail {
+    overflow: hidden;
+}
+.show-detail #main {
+    -webkit-transform: translateX(-60%);
+    transform: translateX(-60%);
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
