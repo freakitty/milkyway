@@ -42,16 +42,24 @@ function init() {
         planet = new THREE.Mesh(geom, mat),
         planet2 = new THREE.Mesh(geom2, mat2),
         ambientLight = new THREE.AmbientLight(0x999999),
-        lights = [];
+        lights = [],
+        mq = window.matchMedia( "(max-width: 500px)" );
     
-    planet.scale.x = planet.scale.y = planet.scale.z = 16;
-    circle.add(planet);
+        planet.scale.x = planet.scale.y = planet.scale.z = 16;
+        circle.add(planet);
 
-    
-    planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
-    skelet.add(planet2);
+        planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
+        skelet.add(planet2);
+       
+    if (mq.matches){
+        planet.scale.x = planet.scale.y = planet.scale.z = 13;
+            circle.add(planet);
 
+            planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
+            skelet.add(planet2);
+    }
     
+
     scene.add(ambientLight);
   
     
@@ -69,10 +77,25 @@ function init() {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
+        if (mq.matches) {
+            planet.scale.x = planet.scale.y = planet.scale.z = 13;
+            circle.add(planet);
+
+            planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
+            skelet.add(planet2);
+        } else {
+            planet.scale.x = planet.scale.y = planet.scale.z = 16;
+            circle.add(planet);
+
+            planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
+            skelet.add(planet2);
+        }
     }
     window.addEventListener('resize', onWindowResize, false);
 
+    
 }
+
 
 function animate() {
     "use strict";

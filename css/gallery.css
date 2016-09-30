@@ -8,7 +8,7 @@ body{font-family: 'Roboto Mono';}
     z-index: 30;
 }
 @media screen and (max-width:480px){
-    #logo{width: 50%;}
+    #logo{width: 40%;}
 }
 
 /********************************
@@ -257,7 +257,7 @@ GALLERY
     background-color: #fff;
     position: relative;
     z-index: 20;
-    padding-top: 130px;
+    padding-top: 90px;
     box-shadow: 2px 2px 4px #999;
     -webkit-transition: -webkit-transform .6s ease;
     transition: -webkit-transform .6s ease;
@@ -265,7 +265,7 @@ GALLERY
     transition: transform .6s ease, -webkit-transform .6s ease;
 }
 @media (min-width: 640px) {
-    #main {padding: 1em; padding-top: 150px;}
+    #main {padding: 1em; padding-top: 130px;}
 }
 #item1{
     background: url(../images/gallery/Plutonian-haze.jpg);

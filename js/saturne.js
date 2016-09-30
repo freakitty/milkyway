@@ -38,7 +38,7 @@ function init() {
             shading: THREE.FlatShading
         });
 
-    for (var i = 0; i < 2048; i++) {
+    for (var i = 0; i < 1048; i++) {
         var mesh = new THREE.Mesh(geometry, material);
         mesh.position.set(Math.random() - 0.5, Math.random() - 0.5, (Math.random() - 0.5) * 0.01).normalize();
         mesh.position.multiplyScalar(150 + (Math.random() * 120));
@@ -56,18 +56,31 @@ function init() {
             side: THREE.DoubleSide
         }),
         
-        planet = new THREE.Mesh(geom, mat);
+        planet = new THREE.Mesh(geom, mat),
+        planet2 = new THREE.Mesh(geom2, mat2),
+        ambientLight = new THREE.AmbientLight(0x999999),
+        lights = [],
+        mq = window.matchMedia( "(max-width: 500px)" );
+    
     planet.scale.x = planet.scale.y = planet.scale.z = 16;
     circle.add(planet);
 
-    var planet2 = new THREE.Mesh(geom2, mat2);
+    
     planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
     skelet.add(planet2);
+    
+     if (mq.matches){
+        planet.scale.x = planet.scale.y = planet.scale.z = 13;
 
-    var ambientLight = new THREE.AmbientLight(0x999999);
+            planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
+
+
+    }
+
+    
     scene.add(ambientLight);  
 
-    var lights = [];
+    
     lights[0] = new THREE.DirectionalLight(0xffffff, 1);
     lights[0].position.set(1, 0, 0);
     lights[1] = new THREE.DirectionalLight(0x11E8BB, 1);
@@ -78,17 +91,29 @@ function init() {
     scene.add(lights[1]);
     scene.add(lights[2]);
   
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    if (mq.matches) {
+            planet.scale.x = planet.scale.y = planet.scale.z = 13;
 
+            planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
+
+        mesh.position.multiplyScalar(120 + (Math.random() * 120));
+
+        } else {
+            planet.scale.x = planet.scale.y = planet.scale.z = 16;
+
+            planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
+            mesh.position.multiplyScalar(150 + (Math.random() * 100));
+        }
+}
+    
     window.addEventListener('resize', onWindowResize, false);
 
 }
 
-function onWindowResize() {
-    "use strict";
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-}
 
 function animate() {
     requestAnimationFrame(animate);

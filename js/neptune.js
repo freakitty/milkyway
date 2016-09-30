@@ -26,38 +26,50 @@ function init() {
   scene.add(skelet);
 
 
-  var geom = new THREE.IcosahedronGeometry(5, 1);
-  var geom2 = new THREE.IcosahedronGeometry(15, 1);
+  var geom = new THREE.IcosahedronGeometry(5, 1),
+   geom2 = new THREE.IcosahedronGeometry(15, 1),
 
-  var material = new THREE.MeshPhongMaterial({
+  material = new THREE.MeshPhongMaterial({
     color: 0xffffff,
     shading: THREE.FlatShading
-  });
+  }),
 
-  var mat = new THREE.MeshPhongMaterial({
+  mat = new THREE.MeshPhongMaterial({
     color: 0xffffff,
     shading: THREE.FlatShading
-  });
+  }),
 
-  var mat2 = new THREE.MeshPhongMaterial({
+  mat2 = new THREE.MeshPhongMaterial({
     color: 0xffffff,
     wireframe: true,
     side: THREE.DoubleSide
 
-  });
-
-  var planet = new THREE.Mesh(geom, mat);
+  }),
+planet = new THREE.Mesh(geom, mat),
+      planet2 = new THREE.Mesh(geom2, mat2),
+      ambientLight = new THREE.AmbientLight(0x999999 ),
+      lights = [],
+      mq = window.matchMedia( "(max-width: 500px)" );
+    
   planet.scale.x = planet.scale.y = planet.scale.z = 16;
   circle.add(planet);
 
-  var planet2 = new THREE.Mesh(geom2, mat2);
+  
   planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
   skelet.add(planet2);
+    
+    if (mq.matches){
+        planet.scale.x = planet.scale.y = planet.scale.z = 13;
+            circle.add(planet);
 
-  var ambientLight = new THREE.AmbientLight(0x999999 );
+            planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
+            skelet.add(planet2);
+    }
+
+  
   scene.add(ambientLight);
   
-  var lights = [];
+  
 lights[0] = new THREE.DirectionalLight( 0xffffff, 1 );
 lights[0].position.set( 1, 0, 0 );
 lights[1] = new THREE.DirectionalLight( 0x11E8BB, 1 );
@@ -67,16 +79,31 @@ lights[2].position.set( -0.75, -1, 0.5 );
 scene.add( lights[0] );
 scene.add( lights[1] );
 scene.add( lights[2] );
+    
+    function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+        if (mq.matches) {
+            planet.scale.x = planet.scale.y = planet.scale.z = 13;
+            circle.add(planet);
+
+            planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
+            skelet.add(planet2);
+        } else {
+            planet.scale.x = planet.scale.y = planet.scale.z = 16;
+            circle.add(planet);
+
+            planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
+            skelet.add(planet2);
+        }
+}
 
   window.addEventListener('resize', onWindowResize, false);
 
 };
 
-function onWindowResize() {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-}
+
 
 function animate() {
   requestAnimationFrame(animate);

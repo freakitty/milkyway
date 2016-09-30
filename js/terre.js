@@ -29,7 +29,7 @@ function init() {
     scene.add(skelet);
 
 
-    var terre = new THREE.IcosahedronGeometry(3, 1),
+    var terre = new THREE.IcosahedronGeometry(9, 1),
         geom2 = new THREE.IcosahedronGeometry(15, 1),
         material = new THREE.MeshPhongMaterial({
             color: 0xffffff,
@@ -45,18 +45,30 @@ function init() {
             side: THREE.DoubleSide
         }),
 
-        planet = new THREE.Mesh(terre, mat);
-    planet.scale.x = planet.scale.y = planet.scale.z = 16;
+        planet = new THREE.Mesh(terre, mat),
+        planet2 = new THREE.Mesh(geom2, mat2),
+        ambientLight = new THREE.AmbientLight(0x999999),
+        lights = [],
+        mq = window.matchMedia( "(max-width: 500px)" );
+    
+    planet.scale.x = planet.scale.y = planet.scale.z = 10;
     circle.add(planet);
 
-    var planet2 = new THREE.Mesh(geom2, mat2);
+    
     planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
     skelet.add(planet2);
 
-    var ambientLight = new THREE.AmbientLight(0x999999);
+    if (mq.matches){
+        planet.scale.x = planet.scale.y = planet.scale.z = 8;
+            circle.add(planet);
+
+            planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
+            skelet.add(planet2);
+    }
+    
     scene.add(ambientLight);
   
-    var lights = [];
+    
     lights[0] = new THREE.DirectionalLight(0xffffff, 1);
     lights[0].position.set(1, 0, 0);
     lights[1] = new THREE.DirectionalLight(0x11E8BB, 1);
@@ -66,17 +78,32 @@ function init() {
     scene.add(lights[0]);
     scene.add(lights[1]);
     scene.add(lights[2]);
+    
+    function onWindowResize() {
+    "use strict";
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    if (mq.matches) {
+            planet.scale.x = planet.scale.y = planet.scale.z = 8;
+            circle.add(planet);
+
+            planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
+            skelet.add(planet2);
+        } else {
+            planet.scale.x = planet.scale.y = planet.scale.z = 10;
+            circle.add(planet);
+
+            planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
+            skelet.add(planet2);
+        }
+}
 
     window.addEventListener('resize', onWindowResize, false);
 
 }
 
-function onWindowResize() {
-    "use strict";
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-}
+
 
 function animate() {
     "use strict";
