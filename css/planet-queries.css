@@ -14,24 +14,19 @@
 @media screen and (max-width:768px){
     #rightArrow{top: 85%;}
     #leftArrow{top: 85%;}
+    .line{width: 200px;}
+    #masse{width: 200px;}
+    #massePointer{top: -60px;}
+    #temperature{width: 200px;}
+    #tempPointer{top: 20px;}
+    #gravite{width: 200px;}
+    #gravitePointer{left: 200px; top: -60px;}
+    #idCarte{width: 200px;}
+    #idPointer{left: 200px; top:20px; }
+    #idInfos{top: -300px; left: -380px;}
 }
 
 @media screen and (max-width:600px){
-}
-
-@media screen and (max-width:480px){
-    #button{left: 145px;}
-    #closeId{top: -95%;left: 77%;z-index: 99;}
-    #idInfos{width: 250px;left: -84%;top: -90%;z-index: 90;}
-    #closeGravite{top: 43%;left: 97%;}
-    #graviteInfos{margin-left: 4%;width: 137px;}
-    #tempInfos{width: 190px;margin-left: -75px;}
-    #closeTemp{top: 53%;left: -1%}
-    #masseInfos{width: 180px;}
-    #closeMasse{top: -35%;}
-    .infosPlanet{font-size: 0.6em;}
-    .element{font-size:0.7em;}
-    footer{bottom: -98%; width: 300px;}
     #rightArrow{right: 55px;}
     #rightArrow span{width: 50px; height: 9px;}
     #leftArrow span{width: 50px; height: 9px;}
@@ -47,8 +42,35 @@
 #leftArrow span:last-child{
     transform:translateY(15px) rotate(-135deg);
 }
-    #pointer{width: 150px; height: 150px;}
+    #graviteInfos{margin: 10px -120px;}
+    #closeGravite{left: 48px;}
+    #tempInfos{margin: 10px -50px;}
+    #closeTemp{left: 188px;}
+    #masseInfos{margin: 10px -50px;}
+    #closeMasse{left: 147px;}
+    #idInfos{top: -290px;}
+    
 }
+
+@media screen and (max-width:480px){
+    #button{left: 145px;}
+    .line{width: 150px;}
+    #masse{width: 150px; top: 42%;}
+    #massePointer{top: -60px;}
+    #temperature{width: 150px;top: 58%;}
+    #tempPointer{top: 20px;}
+    #gravite{width: 150px; top: 42%;}
+    #gravitePointer{left: 150px; top: -60px;}
+    #idCarte{width: 150px; top: 58%;}
+    #idPointer{left: 150px; top:20px;}
+    #closeMasse{top: -85px;}
+    #idInfos{width: 300px; left: -298px; top: -215px;}
+    #closeId{left: 290px;}
+    .infosPlanet{font-size: 0.6em;}
+    .element{font-size:0.7em;}
+   footer{width: 290px;}
+}
+
 @media screen and (max-width:400px){
     .nav-item, .menu-open-button {width: 40px; height: 40px; top: 10px; right: 20px;}
     .menu-open:checked ~ .nav-item:nth-child(3) {
@@ -76,9 +98,41 @@
     }
     .search{width: 20px; height: 20px;}
     .search:after{top: 14px; right: -3px;}
+    .line{width: 120px;}
+    #masse{width: 120px; top: 42%;}
+    #massePointer{top: -60px;}
+    #temperature{width: 120px;top: 58%;}
+    #tempPointer{top: 20px;}
+    #gravite{width: 120px; top: 42%;}
+    #gravitePointer{left: 120px; top: -60px;}
+    #idCarte{width: 120px; top: 58%;}
+    #idPointer{left: 120px; top:20px;}
+    #masseInfos{width: 170px; margin: 10px -25px;}
+    #closeMasse{left: 134px;}
+    #tempInfos{width: 200px; margin: 10px -25px;}
+    #closeTemp{left: 162px;}
+    #graviteInfos{width: 165px; margin: 10px -105px;}
+    #idInfos{width: 250px; left: -242px; top: -220px;}
+    #closeId{left: 240px;}
+    
 }
 @media screen and (max-width:320px){
-    footer{bottom: -135%;}
+    .line{width: 100px;}
+    #masse{width: 100px; top: 42%;}
+    #massePointer{top: -60px;}
+    #temperature{width: 100px;top: 58%;}
+    #tempPointer{top: 20px;}
+    #gravite{width: 100px; top: 42%;}
+    #gravitePointer{left: 100px; top: -60px;}
+    #idCarte{width: 100px; top: 58%;}
+    #idPointer{left: 100px; top:20px;}
+    #graviteInfos{width: 130px; margin: 10px -90px;}
+    #closeGravite{left: 32px;}
+    #masseInfos{width: 158px; margin: 10px -25px;}
+    #closeMasse{left: 120px; top: -78px;}
+    #idInfos{left: -223px; top: -200px;}
+    .infosPlanet{padding: 6px;}
     .element{font-size: 0.5em;}
+    
 
 }

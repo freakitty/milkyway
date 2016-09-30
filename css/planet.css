@@ -268,12 +268,7 @@ MAP POINTER
 .mapPointer{
     width: 30px;
 }
-#pointer{
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+.pointer{
     -webkit-animation: jump 2s ease-in-out infinite;
     -moz-animation: jump 2s ease-in-out infinite;
     -ms-animation: jump 2s ease-in-out infinite;
@@ -315,17 +310,34 @@ MAP POINTER
     display: none;
     opacity: 0;
 }
-
+.line{
+    position: absolute;
+    width: 300px;
+    height: 1px;
+    background: #fff;
+}
+/***** MASSE ****/
+#massePointer{
+    position: relative;
+    top: -70px;
+    right: 25px;
+    width: 30px;
+    height: 56px;
+}
 #masse{
     position: absolute;
-    top: -70%;
-    left: -40%;
-    width: 30px;
+    top: 40%;
+    right: 50%;
+    width: 300px;
+    height: 2px;
+}
+.masseLine{
+    transform: rotate(20deg);
 }
 #closeMasse{
-    position: absolute;
-    top: -44%;
-    left: 19%;
+    position: relative;
+    top: -100px;
+    left: 115px;
     display: none;
 }
 #masseInfos{
@@ -333,11 +345,23 @@ MAP POINTER
     margin: 10px -80px;
 }
 
+/***** TEMPERATURE ****/
+#tempPointer{
+    position: relative;
+    top: 30px;
+    right: 28px;
+    width: 30px;
+    height: 56px;
+}
 #temperature{
     position: absolute;
-    top: 20%;
-    left: -70%;
-    width: 30px;
+    top: 60%;
+    right: 50%;
+    width: 300px;
+    height: 2px;
+}
+.tempLine{
+    transform: rotate(-20deg);
 }
 #tempInfos{
     width: 250px;
@@ -345,40 +369,68 @@ MAP POINTER
 }
 #closeTemp{
     position: absolute;
-    top: 46%;
-    left: -2%;
+    top: 50px;
+    left: 135px;
     display: none;
 }
 
+/***** GRAVITE ****/
+#gravitePointer{
+    position: relative;
+    top: -70px;
+    left: 300px;
+    width: 30px;
+    height: 56px;
+}
 #gravite{
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 40%;
+    left: 50%;
+    width: 300px;
+    height: 2px;
+}
+.graviteLine{
+    transform: rotate(-20deg);
 }
 #graviteInfos{
-    margin-top: 10px;
+    margin: 10px -70px;
+    width: 180px;
 }
 #closeGravite{
     position: absolute;
-    top: 36%;
-    left: 94%;
+    top: 50px;
+    left: 98px;
     display: none;
+}
+
+/***** ID ****/
+#idPointer{
+    position: relative;
+    top: 30px;
+    left: 300px;
+    width: 30px;
+    height: 56px;
 }
 #idCarte{
     position: absolute;
-    top: -20%;
+    top: 60%;
     left: 50%;
+    width: 300px;
+    height: 2px;
+}
+.idLine{
+    transform: rotate(20deg);
 }
 #idInfos{
     position: absolute;
     width: 350px;
-    top: -85%;
-    left: -87%;
+    top: -283px;
+    left: -475px;
 }
 #closeId{
     position: absolute;
-    top: -89%;
-    left: 84%;
+    top: -10px;
+    left: 340px;
     display: none;
 }
 #button{

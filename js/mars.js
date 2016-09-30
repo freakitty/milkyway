@@ -159,7 +159,7 @@ $(function () {
         $('#closeMasse').animate({opacity : 1});
         
     }
-    $('#masse').click(function () {
+    $('#masseClick').click(function () {
         openMasse();
     });
     function closeMasse() {
@@ -180,7 +180,7 @@ $(function () {
         $('#closeTemp').animate({opacity : 1});
         
     }
-    $('#temperature').click(function () {
+    $('#tempClick').click(function () {
         openTemp();
     });
     function closeTemp() {
@@ -201,7 +201,7 @@ $(function () {
         $('#closeGravite').animate({opacity : 1});
         
     }
-    $('#gravite').click(function () {
+    $('#gravClick').click(function () {
         openGrav();
     });
     function closeGrav() {
@@ -222,7 +222,7 @@ $(function () {
         $('#closeId').animate({opacity : 1});
         
     }
-    $('#idCarte').click(function () {
+    $('#idClick').click(function () {
         openId();
         closeGrav();
         closeMasse();

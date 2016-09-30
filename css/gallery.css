@@ -7,8 +7,8 @@ body{font-family: 'Roboto Mono';}
     transform: translateX(-50%);
     z-index: 30;
 }
-@media screen and (max-width:480px){
-    #logo{width: 40%;}
+@media screen and (max-width:600px){
+    #logo{width: 35%;}
 }
 
 /********************************

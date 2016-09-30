@@ -46,20 +46,33 @@
            </div>
         </a>
         
-        <div id="pointer"> <!-- REPERES -->
+         <!-- REPERES -->
+        <div id="masse"> <!-- masse -->
            
-            <div id="masse"><!-- masse -->
-                <img src="images/masse-icon.png" alt="masse map pointer" class="mapPointer">
+            <div class="masseLine line">
+                <span></span>
+            </div>
+            
+            <div class="pointer" id="massePointer"> 
+                <img src="images/masse-icon.png" alt="masse map pointer" class="mapPointer" id="masseClick">
                 <div class="shadow"></div>
                 <div id="masseInfos" class="infosPlanet">
                     <p>Masse : 1,8986×10 <sup>27</sup> kg <br> (317,8 Terres) <br> <br>
                     Masse volumique globale : 1 326 kg/m <sup>3</sup></p>
                 </div>
+                <img src="images/close.png" alt="close button" id="closeMasse">
             </div>
-            <img src="images/close.png" alt="close button" id="closeMasse">
             
-            <div id="temperature" > <!-- temperature -->
-                <img src="images/temperature-icon.png" alt="temperature map pointer" class="mapPointer">
+        </div> 
+            
+        <div id="temperature"> <!-- temperature -->
+            
+            <div class="tempLine line">
+                <span></span>
+            </div>
+            
+            <div class="pointer" id="tempPointer">
+                <img src="images/temperature-icon.png" alt="temperature map pointer" class="mapPointer" id="tempClick">
                 <div class="shadow"></div>
                 <div id="tempInfos" class="infosPlanet">                 
                     <p> Température d’équilibre <br>du corps noir : <br>110,0 K (-163 °C) <br> <br>   
@@ -67,24 +80,39 @@
                     • Température à 10 kPa	112 K <br> (-161 °C) <br>
                     • Température à 100 kPa	165 K <br> (-108 °C)</p>
                 </div>
+                <img src="images/close.png" alt="close button" id="closeTemp">
             </div>
-            <img src="images/close.png" alt="close button" id="closeTemp">
             
-            <div id="gravite" > <!-- gravite -->
-                <img src="images/gravite-icon.png" alt="gravite map pointer" class="mapPointer">
+        </div>
+            
+        <div id="gravite" > <!-- gravite -->  
+           
+            <div class="graviteLine line">
+                <span></span>
+            </div>
+             
+            <div class="pointer" id="gravitePointer">
+                <img src="images/gravite-icon.png" alt="gravite map pointer" class="mapPointer" id="gravClick">
                 <div class="shadow"></div>
                 <div id="graviteInfos" class="infosPlanet">
                     <p>Gravité de surface : <br> 24,7964249 m/s2
                     (2,358 g)</p>
                 </div>
+                <img src="images/close.png" alt="close button" id="closeGravite">
             </div>
-            <img src="images/close.png" alt="close button" id="closeGravite">
             
-            <div id="idCarte" > <!-- carte identite -->
-                <img src="images/id-icon.png" alt="identite map pointer" class="mapPointer">
-                <div class="shadow"></div>
+        </div>
+        
+        <div id="idCarte"> <!-- carte identite -->
+           
+           <div class="idLine line">
+                <span></span>
             </div>
-            <div id="idInfos" class="infosPlanet">
+            
+            <div class="pointer" id="idPointer">
+                <img src="images/id-icon.png" alt="identite map pointer" class="mapPointer" id="idClick">
+                <div class="shadow"></div>
+                <div id="idInfos" class="infosPlanet">
                     <p>                  
                     Demi-grand axe : <br> 778 412 027 km (5,20336301 UA) <br><br>
                     
@@ -100,8 +128,11 @@
                     </p>
                     <hr>
                     <a href="#" id="button">En savoir plus</a>
+                    <img src="images/close.png" alt="close button" id="closeId">
                 </div>
-            <img src="images/close.png" alt="close button" id="closeId">
+            
+            </div>
+            
             
         </div>
     <div id="soleil"></div>
