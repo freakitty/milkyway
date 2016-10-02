@@ -23,7 +23,8 @@
     #gravitePointer{left: 200px; top: -60px;}
     #idCarte{width: 200px;}
     #idPointer{left: 200px; top:20px; }
-    #idInfos{top: -300px; left: -380px;}
+    #idInfos{top: -267px; left: -380px;}
+    .wrapper{font-size: 0.8em;}
 }
 
 @media screen and (max-width:600px){
@@ -50,10 +51,10 @@
     #closeMasse{left: 147px;}
     #idInfos{top: -290px;}
     
+    
 }
 
 @media screen and (max-width:480px){
-    #button{left: 145px;}
     .line{width: 150px;}
     #masse{width: 150px; top: 42%;}
     #massePointer{top: -60px;}

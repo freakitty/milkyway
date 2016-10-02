@@ -24,16 +24,11 @@ function loadGalleryData(target) {
     showAside();
 }
 
-function sendFocusBack() {
-    "use strict";
-    $(".active").focus();
-}
 		
 function killAside() {
     "use strict";
     if ($("html").hasClass(slideClass)) {
         $("html").removeClass(slideClass);
-        sendFocusBack();
     }
 }
 

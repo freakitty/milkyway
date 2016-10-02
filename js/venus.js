@@ -239,3 +239,63 @@ $(function () {
     });
 });
 
+
+
+var	$parent = $("#wrapper"),
+    $aside = $("#aside"),
+    $asideTarget = $aside.find(".aside--details"),
+    $asideClose = $aside.find(".close"),
+    $buttonParent = $(".pointer"),
+    $button = $buttonParent.find(".more"),
+    slideClass = "show-detail";
+
+function showAside() {
+    "use strict";
+    if (!$("html").hasClass(slideClass)) {
+        $("html").toggleClass(slideClass);
+    }
+}
+
+function loadPlanetData(target) {
+    "use strict";
+    var $this = $(target),
+        itemHtml = $this.find(".details").html();
+    $asideTarget.html(itemHtml);
+    showAside();
+}
+
+		
+function killAside() {
+    "use strict";
+    if ($("html").hasClass(slideClass)) {
+        $("html").removeClass(slideClass);
+    }
+}
+
+$button.on("click", function (e) {
+    "use strict";
+    e.preventDefault();
+	e.stopPropagation();
+	if (!$("html").hasClass(slideClass)) {
+        $button.removeClass("active");
+        $(this).addClass("active");
+        $(this).attr("true");
+        loadPlanetData($(this));
+    } else {
+        killAside();
+        $(this).attr("false");
+    }
+});
+
+$asideClose.on("click", function (e) {
+    "use strict";
+    e.preventDefault();
+    killAside();
+});
+
+$parent.on("click", function (e) {
+    "use strict";
+    if ($("html").hasClass(slideClass)) {
+        killAside();
+    }
+});
