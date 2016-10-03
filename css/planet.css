@@ -1,3 +1,4 @@
+html, body{height: 100%;}
 body{font-family: 'Roboto Mono'; overflow: hidden;}
 #wrapper{
     position: relative;
@@ -5,7 +6,7 @@ body{font-family: 'Roboto Mono'; overflow: hidden;}
     z-index: 20;
     transition: transform .6s ease;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #11e8bb;
     background: -moz-linear-gradient(top, #11e8bb, #8200c9);
     background: -ms-linear-gradient(top, #11e8bb, #8200c9);
@@ -13,16 +14,28 @@ body{font-family: 'Roboto Mono'; overflow: hidden;}
     background: -webkit-linear-gradient(top, #11e8bb,#8200c9);
     background: linear-gradient(to bottom, #11e8bb,#8200c9);  
 }
-
 #logo{
     position: absolute;
-    top: -20px;
     left: 50%;
+    top: -20px;
     transform: translateX(-50%);
 }
 #logo a img{
-    width: 85%;
+    width: 80px;
 }
+
+h1{
+    position: absolute;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: 3px;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+b{font-weight: 700;}
 /********************************
 Navigation
 ********************************/
@@ -112,7 +125,7 @@ Navigation
 
 .nav-item {
     font-size: 8px;
-    line-height: 14px;
+    line-height: 23px;
     padding-top: 12px;
     text-decoration: none;
     text-transform: uppercase;
@@ -441,8 +454,7 @@ MAP POINTER
     position: relative;
     border: 2px solid #ff00f0;
     padding: 0 5px 2px 5px;
-    border-radius: 7px;
-    font-size: 0.5em;
+    border-radius: 10px;
     text-decoration: none;
     text-align: center;
     color: #000;
@@ -577,4 +589,7 @@ h2{
     margin: -1px;
     padding: 0;
     border: 0;
+}
+.mainText{
+    column-count: 2;
 }

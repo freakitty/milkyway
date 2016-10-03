@@ -250,6 +250,7 @@ $(function () {
     });
 });
 
+
 var	$parent = $("#wrapper"),
     $aside = $("#aside"),
     $asideTarget = $aside.find(".aside--details"),

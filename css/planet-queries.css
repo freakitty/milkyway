@@ -8,8 +8,11 @@
 @media screen and (max-width:1080px){
 }
 
-@media screen and (max-width:960px){}
-@media screen and (max-width:800px){    
+@media screen and (max-width:960px){
+    .mainText{column-count: 1;}
+}
+@media screen and (max-width:800px){ 
+    
 }
 @media screen and (max-width:768px){
     #rightArrow{top: 85%;}
@@ -55,6 +58,7 @@
 }
 
 @media screen and (max-width:480px){
+    #logo{width: 20%;}
     .line{width: 150px;}
     #masse{width: 150px; top: 42%;}
     #massePointer{top: -60px;}
@@ -97,6 +101,7 @@
     .burger{
         width: 60px;
     }
+    .nav-item{line-height: 17px;font-size: 7px;}
     .search{width: 20px; height: 20px;}
     .search:after{top: 14px; right: -3px;}
     .line{width: 120px;}

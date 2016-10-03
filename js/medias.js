@@ -1,6 +1,13 @@
 /*jslint browser: true*/
 /*global $*/
 /* jslint expr: true */
+$(function () {
+    "use strict";
+    $(".element").typed({
+        strings: ["Bienvenue sur la galerie,", "cliquez sur les photos pour en savoir plus."],
+        typeSpeed: 30
+    });
+});
 var	$parent = $("#main"),
     $aside = $("#aside"),
     $asideTarget = $aside.find(".aside--details"),

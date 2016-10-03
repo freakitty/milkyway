@@ -26,7 +26,7 @@
     .element{font-size:0.7em;}
     body{overflow-y: scroll;}
     #wrapper{background-color: #OOO; height: 200vh;}
-    #planets{max-width: 20%; top: 40%;}
+    #planets{max-width: 20%;}
     footer{bottom: -98%; width: 300px;}
     .systeme{margin: 25px;} 
     
@@ -58,6 +58,7 @@
     }
     .search{width: 20px; height: 20px;}
     .search:after{top: 14px; right: -3px;}
+    .nav-item{line-height: 17px;font-size: 7px;}
 }
 @media screen and (max-width:320px){
     #wrapper{height: 250vh;}

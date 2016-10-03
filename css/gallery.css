@@ -1,3 +1,4 @@
+html, body{height: 100%;}
 body{font-family: 'Roboto Mono';}
 
 #logo{
@@ -11,6 +12,14 @@ body{font-family: 'Roboto Mono';}
     #logo{width: 35%;}
 }
 
+h1{
+    position: absolute;
+    top: 160px;
+    left: 3%;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 500;
+}
 /********************************
 Navigation
 ********************************/
@@ -102,7 +111,7 @@ Navigation
 
 .nav-item {
     font-size: 8px;
-    line-height: 14px;
+    line-height: 23px;
     padding-top: 12px;
     text-decoration: none;
     text-transform: uppercase;
@@ -245,8 +254,46 @@ Queries menu
     .burger{
         width: 60px;
     }
+    .nav-item{line-height: 17px;font-size: 7px;}
     .search{width: 20px; height: 20px;}
     .search:after{top: 14px; right: -3px;}
+}
+
+/********************************
+Typed
+********************************/
+
+.typed-cursor{
+    color: #fff;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+#typing{
+    position: absolute;
+    top: 210px;
+    left: 3%;
+}
+.element{
+    color: black;
+    font-size: 0.9em;
+    font-weight: 500;
 }
 
 /***************
@@ -257,7 +304,7 @@ GALLERY
     background-color: #fff;
     position: relative;
     z-index: 20;
-    padding-top: 90px;
+    padding-top: 250px;
     box-shadow: 2px 2px 4px #999;
     -webkit-transition: -webkit-transform .6s ease;
     transition: -webkit-transform .6s ease;
@@ -265,14 +312,14 @@ GALLERY
     transition: transform .6s ease, -webkit-transform .6s ease;
 }
 @media (min-width: 640px) {
-    #main {padding: 1em; padding-top: 130px;}
+    #main {padding: 1em; padding-top: 250px;}
 }
 #item1{
     background: url(../images/gallery/Plutonian-haze.jpg);
     background-size: cover;
 }
 #item2{
-    background: url(../images/gallery/Crescent%20earth.jpg);
+    background: url(../images/gallery/Crescent-earth.jpg);
     background-size: cover;
 }
 #item3{
@@ -312,7 +359,7 @@ GALLERY
     background-size: cover;
 }
 #item12{
-    background: url(../images/gallery/eclipse-soleil.jpg);
+    background: url(../images/gallery/europa.jpg);
     background-size: cover;
 }
 .gallery {
@@ -322,10 +369,7 @@ GALLERY
 }
 
 @media (min-width: 640px) {
-    .gallery li {
-    float: left;
-    width: 33.33%;
-  }
+    .gallery li {float: left; width: 33.33%;}
 }
 .items {
     margin: 1em;
@@ -349,6 +393,10 @@ GALLERY
 }
 #aside .wrapper {
     padding: 1em;
+    font-size: 0.8em
+}
+@media (min-width: 768px) {
+    #aside .wrapper{column-count: 2;font-size: 1em;}
 }
 #aside .close {
     width: 25px;

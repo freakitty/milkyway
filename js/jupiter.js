@@ -132,6 +132,8 @@ $('#logo').mouseout(function () {
     "use strict";
     logoUp();
 });
+
+
 $(function () {
     "use strict";
     $(".element").typed({
@@ -237,9 +239,6 @@ $(function () {
         closeId();
     });
 });
-
-
-
 
 
 var	$parent = $("#wrapper"),

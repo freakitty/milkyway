@@ -59,10 +59,10 @@ function init() {
     skelet.add(planet2);
     
     if (mq.matches){
-        planet.scale.x = planet.scale.y = planet.scale.z = 13;
+        planet.scale.x = planet.scale.y = planet.scale.z = 12;
             circle.add(planet);
 
-            planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
+            planet2.scale.x = planet2.scale.y = planet2.scale.z = 7;
             skelet.add(planet2);
     }
 
@@ -84,10 +84,10 @@ function init() {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
         if (mq.matches) {
-            planet.scale.x = planet.scale.y = planet.scale.z = 13;
+            planet.scale.x = planet.scale.y = planet.scale.z = 12;
             circle.add(planet);
 
-            planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
+            planet2.scale.x = planet2.scale.y = planet2.scale.z = 7;
             skelet.add(planet2);
         } else {
             planet.scale.x = planet.scale.y = planet.scale.z = 16;

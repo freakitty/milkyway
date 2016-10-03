@@ -232,6 +232,7 @@ $("#inpt_search").on('blur', function () {
     });
     });
 
+
 var	$parent = $("#wrapper"),
     $aside = $("#aside"),
     $asideTarget = $aside.find(".aside--details"),
