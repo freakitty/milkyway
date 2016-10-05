@@ -52,7 +52,7 @@
     .burger{width: 60px;}
     .nav-item{line-height: 17px;font-size: 7px;}
     .search{width: 20px; height: 20px;}
-    .search:after{top: 14px; left: 17px;}
+    .search:after{top: 14px; left: 17px;height: 10px;}
     #typing{font-size: 0.9em;}
 }
 @media screen and (max-width:320px){

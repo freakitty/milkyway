@@ -80,7 +80,7 @@
         width: 60px;
     }
     .search{width: 20px; height: 20px;}
-    .search:after{top: 14px; left: 17px;}
+    .search:after{top: 14px; left: 17px; height: 10px;}
     .nav-item{line-height: 17px;font-size: 7px;}
 }
 
