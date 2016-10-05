@@ -1,11 +1,35 @@
+@font-face {
+    font-family:'RobotoMono';
+    font-weight: 700;
+    src: local ('../font/RobotoMono-Bold.ttf');
+    src: local ('../font/RobotoMono-Bold.woff');
+}
+@font-face {
+    font-family:'RobotoMono';
+    font-weight: 500;
+    src: local ('../font/RobotoMono-Medium.ttf');
+    src: local ('../font/RobotoMono-Medium.woff');
+}
+@font-face {
+    font-family:'RobotoMono';
+    font-weight: 400;
+    src: local ('../font/RobotoMono-Regular.ttf');
+    src: local ('../font/RobotoMono-Regular.woff');
+}
+@font-face {
+    font-family:'RobotoMono';
+    font-weight: 300;
+    src: local ('../font/RobotoMono-light.ttf');
+    src: local ('../font/RobotoMono-ligth.woff');
+}
+
 html, body{height: 100%;}
-body{font-family: 'Roboto Mono';overflow: hidden;}
+body{font-family: 'Roboto Mono', 'RobotoMono';overflow: hidden;}
 
 #wrapper{
     width: 100%;
     height: 100%;
-    background: url(../images/background.png)no-repeat fixed; 
-    background-size: cover;
+    background: #000;
 }
 #logo{
     position: absolute;
@@ -247,7 +271,7 @@ Typed
     position: absolute;
     top: 25%;
     left: 10%;
-    max-width: 65%;
+    max-width: 80%;
 }
 .element{
     color: #fff;
@@ -280,9 +304,14 @@ PLANETS
     align-items: center;  
 }
 .systeme{
-    margin: 20px;  
+    margin: 20px; 
+    width: 100%;
 }
-
+.planetHover{
+    display: none;
+    position: relative;
+    border: 1px solid #ccc;
+}
 /********************************
 SUN
 ********************************/
@@ -293,6 +322,7 @@ SUN
     opacity: 0;
     transition: all 0.5s ease;
 }
+
 #globalSun:hover p{opacity: 1;}
 #sun{
     color: #fff;
@@ -342,14 +372,11 @@ SUN
     to {transform:rotate(360deg);}
 }
 #sunHover{
-    display: none;
-    position: relative;
     top: -5%;
     left: -5%;
     transform: translate(-50%,-50%);
     width: 210px;
     height: 210px;
-    border: 1px solid #ccc;
     border-radius: 210px;
     -webkit-animation-name: spin;
     -webkit-animation-duration: 10s;
@@ -388,7 +415,9 @@ SUN
     from { -o-transform: rotate(0deg); }
     to { -o-transform: rotate(360deg); }
 }
-
+#globalSun:hover #sunHover{
+    display: block;
+}
 /********************************
 MERCURY
 ********************************/
@@ -447,14 +476,11 @@ MERCURY
     to {transform:rotate(360deg);}
 }
 #mercuryHover{
-    display: none;
-    position: relative;
     top: -50%;
     left: -50%;
     transform: translate(-50%,-50%);
     width: 46px;
     height: 46px;
-    border: 1px solid #ccc;
     border-radius: 46px;
     -webkit-animation-name: spin;
     -webkit-animation-duration: 5s;
@@ -493,7 +519,9 @@ MERCURY
     from { -o-transform: rotate(0deg); }
     to { -o-transform: rotate(360deg); }
 }
-
+#globalMercury:hover #mercuryHover{
+    display: block;
+}
 /********************************
 VENUS
 ********************************/
@@ -552,14 +580,11 @@ VENUS
     to {transform:rotate(360deg);}
 }
 #venusHover{
-    display: none;
-    position: relative;
     top: -25%;
     left: -17%;
     transform: translate(-50%,-50%);
     width: 70px;
     height: 70px;
-    border: 1px solid #ccc;
     border-radius: 70px; 
     -webkit-animation-name: spin;
     -webkit-animation-duration: 10s;
@@ -598,7 +623,9 @@ VENUS
     from { -o-transform: rotate(0deg); }
     to { -o-transform: rotate(360deg); }
 }
-
+#globalVenus:hover #venusHover{
+    display: block;
+}
 /********************************
 EARTH
 ********************************/
@@ -657,14 +684,11 @@ EARTH
     to {transform:rotate(360deg);}
 }
 #earthHover{
-    display: none;
-    position: relative;
     top: -25%;
     left: -20%;
     transform: translate(-50%,-50%);
     width: 66px;
     height: 66px;
-    border: 1px solid #ccc;
     border-radius: 66px; 
     -webkit-animation-name: spin;
     -webkit-animation-duration: 5s;
@@ -711,7 +735,9 @@ EARTH
     position: relative;
     top: 10px;
 }
-
+#globalEarth:hover #earthHover{
+    display: block;
+}
 /********************************
 MARS
 ********************************/
@@ -766,14 +792,11 @@ MARS
     to { -o-transform: rotate(360deg); }
 }
 #marsHover{
-    display: none;
-    position: relative;
     top: -28%;
     left: -31%;
     transform: translate(-50%,-50%);
     width: 54px;
     height: 54px;
-    border: 1px solid #ccc;
     border-radius: 66px;
     -webkit-animation-name: spin;
     -webkit-animation-duration: 8s;
@@ -829,7 +852,9 @@ MARS
     top: 8px;
     left: 50px;
 }
-
+#globalMars:hover #marsHover{
+    display: block;
+}
 /********************************
 JUPITER
 ********************************/
@@ -884,14 +909,11 @@ JUPITER
     to { -o-transform: rotate(360deg); }
 }
 #jupiterHover{
-    display: none;
-    position: relative;
     top: -11%;
     left: -13%;
     transform: translate(-20%,-20%);
     width: 110px;
     height: 110px;
-    border: 1px solid #ccc;
     border-radius: 110px;
     -webkit-animation-name: spin;
     -webkit-animation-duration: 2s;
@@ -966,7 +988,9 @@ JUPITER
     top: -17px;
     left: 90px;
 }
-
+#globalJupiter:hover #jupiterHover{
+    display: block;
+}
 /********************************
 STAURN
 ********************************/
@@ -1034,14 +1058,11 @@ STAURN
     background: -o-linear-gradient(right bottom, #ff00f0,#00ffe4);
 }
 #saturnHover{
-    display: none;
-    position: relative;
     top: -15%;
     left: -580%;
     transform: translate(-25%,-25%);
     width: 120px;
     height: 120px;
-    border: 1px solid #ccc;
     border-radius: 120px;
     -webkit-animation-name: spin;
     -webkit-animation-duration: 3s;
@@ -1133,7 +1154,9 @@ STAURN
     top: 63px;
     left: 40px;
 }
-
+#globalSaturn:hover #saturnHover{
+    display: block;
+}
 /********************************
 URANUS
 ********************************/
@@ -1198,14 +1221,11 @@ URANUS
     border-radius: 70px;
 }
 #uranusHover{
-    display: none;
-    position: relative;
     top: -17%;
     left: -17.5%;
     transform: translate(-20%,-80%);
     width: 90px;
     height: 90px;
-    border: 1px solid #ccc;
     border-radius: 90px; 
     -webkit-animation-name: spin;
     -webkit-animation-duration: 5s;
@@ -1288,7 +1308,9 @@ URANUS
     top: 22px;
     left: 80px;
 }
-
+#globalUranus:hover #uranusHover{
+    display: block;
+}
 /********************************
 NEPTUNE
 ********************************/
@@ -1343,14 +1365,11 @@ NEPTUNE
     to { -o-transform: rotate(360deg); }
 }
 #neptuneHover{
-    display: none;
-    position: absolute;
     top: -25%;
     left: -29%;
     transform: translate(-20%,-70%);
     width: 64px;
     height: 64px;
-    border: 1px solid #ccc;
     border-radius: 64px;
     -webkit-animation-name: spin;
     -webkit-animation-duration: 2s;
@@ -1397,6 +1416,9 @@ NEPTUNE
     position: relative;
     top: 10px;
 }
+#globalNeptune:hover #neptuneHover{
+    display: block;
+}
 
 /********************************
 Footer
@@ -1404,10 +1426,15 @@ Footer
 
 footer{
     position: absolute;
-    bottom: 3%;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
     font-size: 0.6em;
     font-weight: 300;
+}
+footer p{text-align: center;}
+footer a{
+    text-decoration: none;
+    color: #fff;
 }

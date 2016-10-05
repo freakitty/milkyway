@@ -116,18 +116,7 @@ function animate() {
 
   renderer.render( scene, camera )
 };
-function logoDown() {
-    TweenMax.to('#logo', 0.3, {top: '10px'});
-}
-function logoUp() {
-    TweenMax.to('#logo', 0.6, {top: '-20px'});
-}
-$('#logo').mouseover(function(){
-    logoDown();
-});
-$('#logo').mouseout(function(){
-    logoUp();
-});
+
 $(function () {
     "use strict";
     $(".element").typed({

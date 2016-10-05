@@ -96,7 +96,6 @@ function init() {
     
 }
 
-
 function animate() {
     "use strict";
     requestAnimationFrame(animate);
@@ -115,24 +114,6 @@ window.onload = function () {
     init();
     animate();
 };
-
-function logoDown() {
-    "use strict";
-    TweenMax.to('#logo', 0.3, {top: '10px'});
-}
-function logoUp() {
-    "use strict";
-    TweenMax.to('#logo', 0.6, {top: '-20px'});
-}
-$('#logo').mouseover(function () {
-    "use strict";
-    logoDown();
-});
-$('#logo').mouseout(function () {
-    "use strict";
-    logoUp();
-});
-
 
 $(function () {
     "use strict";

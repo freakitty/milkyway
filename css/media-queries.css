@@ -19,16 +19,39 @@
 
 @media screen and (max-width:600px){
 }
-
+@media screen and (min-width:480px){
+    #wrapper{background:url(../images/background.png)no-repeat fixed; background-size: cover;}
+}
 @media screen and (max-width:480px){
     #logo{top: 10px;}
-    #typing{top: 20%;}
+    #typing{top: 150px;}
     .element{font-size:0.7em;}
     body{overflow-y: scroll;}
-    #wrapper{background-color: #OOO; height: 200vh;}
-    #planets{max-width: 20%;}
-    footer{bottom: -98%; width: 300px;}
-    .systeme{margin: 25px;} 
+    #wrapper{background: #OOO; position: relative; padding: 1em; padding-top: 50px; height: 1650px;}
+    #planets{display: block; position: relative; width: 100%; height: 80%;}
+    .planets{float: left; width: 50%; height: 22%;}
+    .systeme{margin: 25% auto;}
+    #globalSun:hover #sunHover{display: none;}
+    #globalMercury:hover #mercuryHover{display: none;}
+    #globalVenus:hover #venusHover{display: none;}
+    #globalEarth:hover #earthHover{display: none;}
+    #globalMars:hover #marsHover{display: none;}
+    #globalJupiter:hover #jupiterHover{display: none;}
+    #globalSaturn:hover #saturnHover{display: none;}
+    #globalUranus:hover #uranusHover{display: none;}
+    #globalNeptune:hover #neptuneHover{display: none;}
+    #sun{width: 150px; height: 150px;}
+    #globalSun p{opacity: 1; top: -2%; left: 39%}
+    #globalMercury p{opacity: 1; top: 248px; left: 65px;}
+    #globalVenus p{opacity: 1; top: 236px; right: 68px;}
+    #globalEarth p{opacity: 1; top: 522px; left: 67px;}
+    #globalMars p{opacity: 1; top: 520px; right: 75px;}
+    #globalJupiter p{opacity: 1; top: 783px; left: 60px;;}
+    #globalSaturn p{opacity: 1; top: 798px; right: 85px;}
+    #globalUranus p{opacity: 1; top: 1080px; left: 73px;}
+    #globalNeptune p{opacity: 1; top: 1080px; right: 73px;}
+    footer{width: 320px;}
+
     
 }
 @media screen and (max-width:400px){
@@ -60,10 +83,15 @@
     .search:after{top: 14px; right: -3px;}
     .nav-item{line-height: 17px;font-size: 7px;}
 }
-@media screen and (max-width:320px){
-    #wrapper{height: 250vh;}
-    footer{bottom: -148%;}
-    .element{font-size: 0.5em;}
-    .systeme{margin: 20px;}
 
+@media screen and (max-width:320px){
+    #typing{top: 120px;}
+    #globalMercury p{top: 230px; left: 50px;}
+    #globalVenus p{top: 220px; right: 52px;}
+    #globalEarth p{top: 505px; left: 52px;}
+    #globalMars p{top: 502px; right: 60px;}
+    #globalJupiter p{top: 770px; left: 40px;;}
+    #globalSaturn p{top: 788px; right: 72px;}
+    #globalUranus p{top: 1060px; left: 58px;}
+    #globalNeptune p{top: 1060px; right: 60px;}
 }

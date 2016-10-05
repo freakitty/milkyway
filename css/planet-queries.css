@@ -53,12 +53,16 @@
     #masseInfos{margin: 10px -50px;}
     #closeMasse{left: 147px;}
     #idInfos{top: -290px;}
-    
-    
 }
 
+@media screen and (min-width:480px){
+    #logo a img:hover{
+    transform: translateY(10px);
+}
+}
 @media screen and (max-width:480px){
-    #logo{width: 20%;}
+    #logo{top: 5px;}
+    #logo a img{width: 50px;}
     .line{width: 150px;}
     #masse{width: 150px; top: 42%;}
     #massePointer{top: -60px;}
@@ -139,6 +143,8 @@
     #idInfos{left: -223px; top: -200px;}
     .infosPlanet{padding: 6px;}
     .element{font-size: 0.5em;}
-    
-
+}
+@media screen and (max-height:480px){
+    h1{top: 15%;}
+    #typing{top: 19%}
 }

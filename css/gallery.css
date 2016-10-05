@@ -1,5 +1,29 @@
+@font-face {
+    font-family:'RobotoMono';
+    font-weight: 700;
+    src: local ('../font/RobotoMono-Bold.ttf');
+    src: local ('../font/RobotoMono-Bold.woff');
+}
+@font-face {
+    font-family:'RobotoMono';
+    font-weight: 500;
+    src: local ('../font/RobotoMono-Medium.ttf');
+    src: local ('../font/RobotoMono-Medium.woff');
+}
+@font-face {
+    font-family:'RobotoMono';
+    font-weight: 400;
+    src: local ('../font/RobotoMono-Regular.ttf');
+    src: local ('../font/RobotoMono-Regular.woff');
+}
+@font-face {
+    font-family:'RobotoMono';
+    font-weight: 300;
+    src: local ('../font/RobotoMono-light.ttf');
+    src: local ('../font/RobotoMono-ligth.woff');
+}
 html, body{height: 100%;}
-body{font-family: 'Roboto Mono';}
+body{font-family: 'Roboto Mono', 'RobotoMono';}
 
 #logo{
     position: absolute;
@@ -8,16 +32,13 @@ body{font-family: 'Roboto Mono';}
     transform: translateX(-50%);
     z-index: 30;
 }
-@media screen and (max-width:600px){
-    #logo{width: 35%;}
-}
 
 h1{
     position: absolute;
-    top: 160px;
+    top: 120px;
     left: 3%;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 500;
 }
 /********************************
@@ -229,35 +250,7 @@ Navigation
 /***************** 
 Queries menu
 ******************/
-@media screen and (max-width:400px){
-    .nav-item, .menu-open-button {width: 40px; height: 40px; top: 10px; right: 20px;}
-    .menu-open:checked ~ .nav-item:nth-child(3) {
-    -webkit-transform: translate3d(0, 40px, 0);
-    transform: translate3d(0, 40px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(4) {
-    -webkit-transform: translate3d(0, 90px, 0);
-    transform: translate3d(0, 90px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(5) {
-    -webkit-transform: translate3d(0, 140px, 0);
-    transform: translate3d(0, 140px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(6) {
-    -webkit-transform: translate3d(0, 190px, 0);
-    transform: translate3d(0, 190px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(7) {
-    -webkit-transform: translate3d(0, 240px, 0);
-    transform: translate3d(0, 240px, 0);
-}
-    .burger{
-        width: 60px;
-    }
-    .nav-item{line-height: 17px;font-size: 7px;}
-    .search{width: 20px; height: 20px;}
-    .search:after{top: 14px; right: -3px;}
-}
+
 
 /********************************
 Typed
@@ -287,14 +280,24 @@ Typed
 }
 #typing{
     position: absolute;
-    top: 210px;
+    top: 150px;
     left: 3%;
 }
 .element{
     color: black;
     font-size: 0.9em;
-    font-weight: 500;
+
 }
+
+
+
+
+
+
+
+
+
+
 
 /***************
 GALLERY
@@ -304,79 +307,89 @@ GALLERY
     background-color: #fff;
     position: relative;
     z-index: 20;
-    padding-top: 250px;
+    padding-top: 220px;
     box-shadow: 2px 2px 4px #999;
     -webkit-transition: -webkit-transform .6s ease;
     transition: -webkit-transform .6s ease;
     transition: transform .6s ease;
     transition: transform .6s ease, -webkit-transform .6s ease;
 }
-@media (min-width: 640px) {
-    #main {padding: 1em; padding-top: 250px;}
-}
+
 #item1{
-    background: url(../images/gallery/Plutonian-haze.jpg);
+    background: rgba(0, 0,0, 0) url(../images/gallery/Plutonian-haze.jpg);
     background-size: cover;
 }
+
 #item2{
     background: url(../images/gallery/Crescent-earth.jpg);
-    background-size: cover;
+    background-size: 115%;
 }
+
 #item3{
     background: url(../images/gallery/io.jpg);
     background-size: cover;
 }
+
 #item4{
     background: url(../images/gallery/jupiter.jpg);
     background-size: cover;
 }
+
 #item5{
     background: url(../images/gallery/Neptune-triton.jpg);
     background-size: cover;
 }
+
 #item6{
     background: url(../images/gallery/Saturn-Sunlight.jpg);
     background-size: cover;
 }
+
 #item7{
     background: url(../images/gallery/Saturn-Tethys-Mimas.jpg);
     background-size: cover;
 }
+
 #item8{
     background: url(../images/gallery/lune.jpg);
     background-size: cover;
 }
+
 #item9{
     background: url(../images/gallery/mars.jpg);
     background-size: cover;
 }
+
 #item10{
     background: url(../images/gallery/Mimas-saturn.jpg);
     background-size: cover;
 }
+
 #item11{
     background: url(../images/gallery/Rhea-saturne.jpg);
     background-size: cover;
 }
+
 #item12{
     background: url(../images/gallery/europa.jpg);
     background-size: cover;
 }
+
 .gallery {
     width: 100%;
     position: relative;
     overflow: hidden;
 }
 
-@media (min-width: 640px) {
-    .gallery li {float: left; width: 33.33%;}
-}
+
 .items {
     margin: 1em;
     display: block;
     padding-top: 73%;
     cursor: pointer;
+    transition: opacity .3s ease;
 }
+.items:hover{opacity: 0.7;}
 
 #aside {
     position: fixed;
@@ -395,9 +408,7 @@ GALLERY
     padding: 1em;
     font-size: 0.8em
 }
-@media (min-width: 768px) {
-    #aside .wrapper{column-count: 2;font-size: 1em;}
-}
+
 #aside .close {
     width: 25px;
     display: block;
@@ -426,4 +437,26 @@ GALLERY
     margin: -1px;
     padding: 0;
     border: 0;
+}
+.credit{
+    font-weight: 300;
+}
+
+/********************************
+Footer
+********************************/
+
+footer{
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    font-size: 0.6em;
+    font-weight: 300;
+}
+footer p{text-align: center;}
+footer a{
+    text-decoration: none;
+    color: #000;
 }

@@ -4,10 +4,14 @@
 $(function () {
     "use strict";
     $(".element").typed({
-        strings: ["Bienvenue sur la galerie,", "cliquez sur les photos pour en savoir plus."],
+        strings: ["Bienvenue,", "cliquez sur les photos pour en savoir plus."],
         typeSpeed: 30
     });
+
+
 });
+
+
 var	$parent = $("#main"),
     $aside = $("#aside"),
     $asideTarget = $aside.find(".aside--details"),
@@ -66,3 +70,5 @@ $parent.on("click", function (e) {
         killAside();
     }
 });
+
+
