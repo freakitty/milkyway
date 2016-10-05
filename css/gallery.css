@@ -35,8 +35,8 @@ body{font-family: 'Roboto Mono', 'RobotoMono';}
 
 h1{
     position: absolute;
-    top: 120px;
-    left: 3%;
+    top: 140px;
+    left: 17%;
     text-transform: uppercase;
     font-size: 1.4em;
     font-weight: 500;
@@ -60,7 +60,7 @@ Navigation
     display: inline-block;
     position: relative;
     top: -3px;
-    right: -6px;
+    left: 6px;
     height: 25px;
     width: 25px;
     box-sizing: border-box;
@@ -75,7 +75,7 @@ Navigation
     position: absolute;
     width: 2px;
     height: 10px;
-    right: -5px;
+    left: 23px;
     top: 18px;
     background: #000;
     border-radius: 3px;
@@ -86,7 +86,8 @@ Navigation
 }
 .search.active, .search:hover {
     width: 200px;
-    right: 165px;
+    left: 5px;
+    background: rgba(255,255,255,0.7);
     border: 2px solid #ff00f0;
 }
 .search.active:after, .search:hover:after {
@@ -99,7 +100,7 @@ Navigation
     width: 100%;
     border: none;
     box-sizing: border-box;
-    color: #fff;
+    color: #000;
     background: transparent;
     outline-width: 0px;
     margin-left: 3px;
@@ -110,14 +111,14 @@ Navigation
 }
 
 .nav-item, .menu-open-button {
-    background: #fff;
+    background: #ccc;
     border-radius: 100%;
     color: #000;
     height: 50px;
     width: 50px;
     position: absolute;
     top: 20px;
-    right: 30px;
+    left: 20px;
     z-index: 50;
     text-align: center;
     -webkit-transition: -webkit-transform ease-out 200ms;
@@ -137,9 +138,10 @@ Navigation
     text-decoration: none;
     text-transform: uppercase;
     display: block;
+    transition: all 0.4s ease;
 }
 .nav-item:hover {
-    background: #ccc;
+    background: #999;
 }
 .nav-item img{
     margin: -6px 5px;
@@ -163,7 +165,7 @@ Navigation
     height: 5px;
     width: 30px;
     position: absolute;
-    right: 0;
+    left: 0;
     -webkit-transition: -webkit-transform 200ms;
     transition: -webkit-transform 200ms;
     transition: transform 200ms;
@@ -247,10 +249,6 @@ Navigation
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
-/***************** 
-Queries menu
-******************/
-
 
 /********************************
 Typed
@@ -280,22 +278,16 @@ Typed
 }
 #typing{
     position: absolute;
-    top: 150px;
-    left: 3%;
+    top: 170px;
+    left: 17%;
+    max-width: 70%
+    
 }
 .element{
     color: black;
     font-size: 0.9em;
 
 }
-
-
-
-
-
-
-
-
 
 
 

@@ -80,12 +80,13 @@
         width: 60px;
     }
     .search{width: 20px; height: 20px;}
-    .search:after{top: 14px; right: -3px;}
+    .search:after{top: 14px; left: 17px;}
     .nav-item{line-height: 17px;font-size: 7px;}
 }
 
 @media screen and (max-width:320px){
-    #typing{top: 120px;}
+    #typing{top: 120px; left: 24%;}
+    #logo{width: 40%;}
     #globalMercury p{top: 230px; left: 50px;}
     #globalVenus p{top: 220px; right: 52px;}
     #globalEarth p{top: 505px; left: 52px;}

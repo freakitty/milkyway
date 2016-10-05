@@ -1,10 +1,13 @@
 @media screen and (max-width:600px){
-    #downArrow span{position: absolute; top: 200px; left: 44%; width: 30px; height: 4px; background-color: #ccc; border-radius: 30px;}
+    #downArrow span{position: absolute; top: 210px; left: 44%; width: 30px; height: 4px; background-color: #ccc; border-radius: 30px;}
     #downArrow span:first-child{transform: translateX(-10px) rotate(45deg);}
     #downArrow span:last-child{transform:translateX(10px) rotate(-45deg);}
     #logo{width: 35%;}
     footer{width: 320px; bottom: 10px;}
     #main{padding-bottom: 30px;}
+    h1{font-size: 1.2em; top: 135px;}
+    .element{font-size: 0.8em}
+    #typing{top: 160px;}
 }
 
 @media screen and (min-width: 640px) {
@@ -14,6 +17,13 @@
 
 @media (min-width: 768px) {
     #aside .wrapper{column-count: 2;font-size: 1em;}
+}
+
+@media screen and (max-width:450px){
+    #main{padding-top: 200px;}
+    h1{top: 115px;}
+    #typing{top: 140px;}
+    #downArrow span{top: 190px;}
 }
 
 
@@ -42,6 +52,13 @@
     .burger{width: 60px;}
     .nav-item{line-height: 17px;font-size: 7px;}
     .search{width: 20px; height: 20px;}
-    .search:after{top: 14px; right: -3px;}
+    .search:after{top: 14px; left: 17px;}
     #typing{font-size: 0.9em;}
+}
+@media screen and (max-width:320px){
+    #main{padding-top: 200px;}
+    h1{top: 105px; font-size: 1em; left: 25%;}
+    .element{font-size: 0.7em;}
+    #typing{top: 130px; left: 25%;}
+    #downArrow span{top: 190px;}
 }
