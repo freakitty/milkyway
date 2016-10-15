@@ -1,29 +1,23 @@
-@media screen and (min-width:801px){ 
-
-}
-
-@media screen and (max-width:1280px){
-}
-
 @media screen and (max-width:1080px){
     #planets{max-width: 80%;}
 }
 
-@media screen and (max-width:960px){}
-@media screen and (max-width:800px){    
-}
 @media screen and (max-width:768px){
     #rightArrow{top: 85%;}
     #leftArrow{top: 85%;}
 }
 
 @media screen and (max-width:600px){
+    #logo{width: 35%;}
 }
+
 @media screen and (min-width:480px){
     #wrapper{background:url(../images/background.png)no-repeat fixed; background-size: cover;}
 }
+
 @media screen and (max-width:480px){
     #logo{top: 10px;}
+    h1{top: 110px;}
     #typing{top: 150px;}
     .element{font-size:0.7em;}
     body{overflow-y: scroll;}
@@ -50,41 +44,25 @@
     #globalSaturn p{opacity: 1; top: 798px; right: 85px;}
     #globalUranus p{opacity: 1; top: 1080px; left: 73px;}
     #globalNeptune p{opacity: 1; top: 1080px; right: 73px;}
-    footer{width: 320px;}
-
-    
+    footer{width: 320px;} 
 }
+
 @media screen and (max-width:400px){
     .nav-item, .menu-open-button {width: 40px; height: 40px; top: 10px; right: 20px;}
-    .menu-open:checked ~ .nav-item:nth-child(3) {
-    -webkit-transform: translate3d(0, 40px, 0);
-    transform: translate3d(0, 40px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(4) {
-    -webkit-transform: translate3d(0, 90px, 0);
-    transform: translate3d(0, 90px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(5) {
-    -webkit-transform: translate3d(0, 140px, 0);
-    transform: translate3d(0, 140px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(6) {
-    -webkit-transform: translate3d(0, 190px, 0);
-    transform: translate3d(0, 190px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(7) {
-    -webkit-transform: translate3d(0, 240px, 0);
-    transform: translate3d(0, 240px, 0);
-}
-    .burger{
-        width: 60px;
-    }
+    .menu-open:checked ~ .nav-item:nth-child(3) {-webkit-transform: translate3d(0, 40px, 0); transform: translate3d(0, 40px, 0); -moz-transform: translate3d(0, 40px, 0); -ms-transform: translate3d(0, 40px, 0); -o-transform: translate3d(0, 40px, 0);}
+    .menu-open:checked ~ .nav-item:nth-child(4) {-webkit-transform: translate3d(0, 90px, 0); transform: translate3d(0, 90px, 0); -moz-transform: translate3d(0, 90px, 0); -ms-transform: translate3d(0, 90px, 0); -o-transform: translate3d(0, 90px, 0);}
+    .menu-open:checked ~ .nav-item:nth-child(5) {-webkit-transform: translate3d(0, 140px, 0); transform: translate3d(0, 140px, 0); -moz-transform: translate3d(0, 140px, 0); -ms-transform: translate3d(0, 140px, 0); -o-transform: translate3d(0, 140px, 0);}
+    .menu-open:checked ~ .nav-item:nth-child(6) {-webkit-transform: translate3d(0, 190px, 0); transform: translate3d(0, 190px, 0); -moz-transform: translate3d(0, 190px, 0); -ms-transform: translate3d(0, 190px, 0); -o-transform: translate3d(0, 190px, 0);}
+    .menu-open:checked ~ .nav-item:nth-child(7) {-webkit-transform: translate3d(0, 240px, 0); transform: translate3d(0, 240px, 0); -moz-transform: translate3d(0, 240px, 0); -ms-transform: translate3d(0, 240px, 0); -o-transform: translate3d(0, 240px, 0);}
+    .burger{width: 60px;}
     .search{width: 20px; height: 20px;}
     .search:after{top: 14px; left: 17px; height: 10px;}
     .nav-item{line-height: 17px;font-size: 7px;}
+    h1{font-size: 0.9em; top: 90px; }
 }
 
 @media screen and (max-width:320px){
+    h1{font-size: 0.8em; top: 80px; }
     #typing{top: 120px; left: 24%;}
     #logo{width: 40%;}
     #globalMercury p{top: 230px; left: 50px;}

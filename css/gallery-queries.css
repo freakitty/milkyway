@@ -1,7 +1,7 @@
 @media screen and (max-width:600px){
-    #downArrow span{position: absolute; top: 210px; left: 44%; width: 30px; height: 4px; background-color: #ccc; border-radius: 30px;}
-    #downArrow span:first-child{transform: translateX(-10px) rotate(45deg);}
-    #downArrow span:last-child{transform:translateX(10px) rotate(-45deg);}
+    #downArrow span{position: absolute; top: 210px; left: 46%; width: 25px; height: 4px; background-color: #ccc; border-radius: 30px;}
+    #downArrow span:first-child{transform: translateX(-8px) rotate(45deg);-webkit-transform: translateX(-8px) rotate(45deg);-moz-transform: translateX(-8px) rotate(45deg);-ms-transform: translateX(-8px) rotate(45deg);-o-transform: translateX(-8px) rotate(45deg);}
+    #downArrow span:last-child{transform:translateX(8px) rotate(-45deg); -webkit-transform:translateX(8px) rotate(-45deg); -moz-transform:translateX(8px) rotate(-45deg); -ms-transform:translateX(8px) rotate(-45deg); -o-transform:translateX(8px) rotate(-45deg);}
     #logo{width: 35%;}
     footer{width: 320px; bottom: 10px;}
     #main{padding-bottom: 30px;}
@@ -19,6 +19,17 @@
     #aside .wrapper{column-count: 2;font-size: 1em;}
 }
 
+@media screen and (max-width:480px){
+    #aside{width: 80%;}
+    .show-detail #main {
+    -webkit-transform: translateX(-80%);
+    -moz-transform: translateX(-80%);
+    -ms-transform: translateX(-80%);
+    -o-transform: translateX(-80%);
+    transform: translateX(-80%);
+}
+}
+
 @media screen and (max-width:450px){
     #main{padding-top: 200px;}
     h1{top: 115px;}
@@ -26,35 +37,21 @@
     #downArrow span{top: 190px;}
 }
 
-
 @media screen and (max-width:400px){
     .nav-item, .menu-open-button {width: 40px; height: 40px; top: 10px; right: 20px;}
-    .menu-open:checked ~ .nav-item:nth-child(3) {
-    -webkit-transform: translate3d(0, 40px, 0);
-    transform: translate3d(0, 40px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(4) {
-    -webkit-transform: translate3d(0, 90px, 0);
-    transform: translate3d(0, 90px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(5) {
-    -webkit-transform: translate3d(0, 140px, 0);
-    transform: translate3d(0, 140px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(6) {
-    -webkit-transform: translate3d(0, 190px, 0);
-    transform: translate3d(0, 190px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(7) {
-    -webkit-transform: translate3d(0, 240px, 0);
-    transform: translate3d(0, 240px, 0);
-}
+    .menu-open:checked ~ .nav-item:nth-child(3) {-webkit-transform: translate3d(0, 40px, 0); transform: translate3d(0, 40px, 0); -moz-transform: translate3d(0, 40px, 0); -ms-transform: translate3d(0, 40px, 0); -o-transform: translate3d(0, 40px, 0);}
+    .menu-open:checked ~ .nav-item:nth-child(4) {-webkit-transform: translate3d(0, 90px, 0); transform: translate3d(0, 90px, 0); -moz-transform: translate3d(0, 90px, 0); -ms-transform: translate3d(0, 90px, 0); -o-transform: translate3d(0, 90px, 0);}
+    .menu-open:checked ~ .nav-item:nth-child(5) {-webkit-transform: translate3d(0, 140px, 0); transform: translate3d(0, 140px, 0); -moz-transform: translate3d(0, 140px, 0); -ms-transform: translate3d(0, 140px, 0); -o-transform: translate3d(0, 140px, 0);}
+    .menu-open:checked ~ .nav-item:nth-child(6) {-webkit-transform: translate3d(0, 190px, 0); transform: translate3d(0, 190px, 0); -moz-transform: translate3d(0, 190px, 0); -ms-transform: translate3d(0, 190px, 0); -o-transform: translate3d(0, 190px, 0);}
+    .menu-open:checked ~ .nav-item:nth-child(7) {-webkit-transform: translate3d(0, 240px, 0); transform: translate3d(0, 240px, 0); -moz-transform: translate3d(0, 240px, 0); -ms-transform: translate3d(0, 240px, 0); -o-transform: translate3d(0, 240px, 0);}
     .burger{width: 60px;}
     .nav-item{line-height: 17px;font-size: 7px;}
     .search{width: 20px; height: 20px;}
     .search:after{top: 14px; left: 17px;height: 10px;}
     #typing{font-size: 0.9em;}
 }
+
+
 @media screen and (max-width:320px){
     #main{padding-top: 200px;}
     h1{top: 105px; font-size: 1em; left: 25%;}

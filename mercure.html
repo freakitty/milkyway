@@ -21,7 +21,7 @@
     <div id="wrapper">
     
         <div id="logo"> <!-- LOGO -->
-            <a href="index.html"><img src="images/logoWhite-icon.png" alt="logo milkywy"></a>
+            <a href="index.html"><img src="images/logoWhite-icon.png" alt="logo milkyway"></a>
         </div><!-- FIN LOGO -->
         
         <h1>mercure</h1>
@@ -35,20 +35,22 @@
             <label class="menu-open-button" for="menu-open">
                 <span class="burger"></span>
             </label>
-            <a href="#" class="nav-item">Galaxies</a>
-            <a href="medias.html" class="nav-item">galerie</a>
-                <div class="cntr nav-item">
-	                <div class="cntr-innr">
-                        <label class="search" for="inpt_search">
-			                <input id="inpt_search" type="text"/>
-                        </label>
-	                </div>
-                </div>
-            <a href="#" class="nav-item">histoire</a>
-            <a href="#" class="nav-item">news</a>
-        </nav><!-- FIN MENU -->
+            <a href="index.html" class="nav-item">Galaxie</a>
+            <a href="#" class="nav-item">Univers</a>
+            <a href="medias.html" class="nav-item">Galerie</a>
+            <a href="#" class="nav-item">Histoire</a>
+            <a href="#" class="nav-item">Actus</a>
+        </nav><!-- FIN MENU --> 
         
-        <a href="venus.html">
+        <div class="cntr">
+            <div class="cntr-innr">
+                <label class="search" for="inpt_search">
+                    <input id="inpt_search" type="text"/>
+                </label>
+            </div>
+        </div>
+        
+        <a href="venus.html"><!-- ARROW -->
             <div id="rightArrow">
                <span></span>
                <span></span>
@@ -60,7 +62,16 @@
                <span></span>
                <span></span>
            </div>
-        </a>
+        </a> 
+        
+        <div id="next">
+            Planète suivante
+        </div>
+        <div id="prev">
+            Planète précédente
+        </div>
+        
+        <!-- FIN ARROW -->
         
         <!-- REPERES -->
         <div id="masse"> <!-- masse -->
@@ -147,7 +158,9 @@
                     <div class="more" id="button">
                     En savoir plus
                         <div class="details visually-hidden">
-                            <img src="images/mercure.jpg" alt="mercure"> 
+                            <img src="images/mercure.jpg" alt="mercure" class="img"> 
+                            <img src="images/scroll-ico.png" alt="icone scroll" class="scroll">
+
                             <div class="wrapper">
                             <h2>MERCURE</h2>
                             <hr>
@@ -161,9 +174,10 @@
                             <br><br>
                             La quasi-absence d'atmosphère — il s'agit en fait d'une exosphère exerçant une pression au sol de l'ordre d'1 nPa (10-14 atm) — combinée à la proximité du Soleil — dont l'irradiance à la surface de Mercure varie entre 4,6 et 10,6 fois la constante solaire (soit 12 300 W/m2 de surface mercurienne) — engendre des températures en surface allant de 90 K (-183 °C) au fond des cratères polaires (là où les rayons du Soleil ne parviennent jamais) jusqu'à 700 K (427 °C) au point subsolaire au périhélie.
                             <br><br>
-                            La planète <b>Mercure doit son nom au dieu Mercure du commerce et des voyages</b>, également messager des autres dieux dans la mythologie romaine. La planète a été nommée ainsi par les Romains à cause de la vitesse à laquelle elle se déplaçait. Le symbole astronomique de Mercure est un cercle posé sur une croix et portant un demi-cercle en forme de cornes (Unicode : ☿). C'est une représentation du caducée du dieu Hermès. <b>Mercure laissa également son nom au troisième jour de la semaine, mercredi (« Mercurii dies »)</b>.</p>
+                            La planète <b>Mercure doit son nom au dieu Mercure du commerce et des voyages</b>, également messager des autres dieux dans la mythologie romaine. La planète a été nommée ainsi par les Romains à cause de la vitesse à laquelle elle se déplaçait. Le symbole astronomique de Mercure est un cercle posé sur une croix et portant un demi-cercle en forme de cornes (Unicode : ☿). C'est une représentation du caducée du dieu Hermès. <b>Mercure laissa également son nom au troisième jour de la semaine, mercredi (« Mercurii dies »)</b>.
+                            </p>
+                            <img src="images/print-icon.png" alt="impression" id="print">
                             <p>
-                            <br><br>
                             <b>Caractéristiques orbitales</b> 
                             <br></p>
                             <hr> 
@@ -298,6 +312,10 @@
             
         </div>
         
+        <div id="exoskelet">
+            exosquelette comparatif de Jupiter
+        </div>
+        
         <div id="mercure"></div>
         
         <footer>
@@ -309,7 +327,7 @@
     </div>
     
     <aside id="aside">
-	<a href="#" class="close"><img src="images/gallery/closeGallery.png" alt="Close button"><span class="visually-hidden">Return to main content</span></a>
+	<a href="#" class="close"><img src="images/gallery/closeGallery.png" alt="Close button"></a>
 	<div class="aside--details">
 		
 	</div>

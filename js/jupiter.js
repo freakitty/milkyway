@@ -1,4 +1,6 @@
 /*global $, jQuery, TweenMax, THREE*/
+
+/* =================================================================== PLANET ====================================================================== */
 var renderer, scene, camera, composer, circle, skelet;
 
 function init() {
@@ -43,26 +45,24 @@ function init() {
         planet2 = new THREE.Mesh(geom2, mat2),
         ambientLight = new THREE.AmbientLight(0x999999),
         lights = [],
-        mq = window.matchMedia( "(max-width: 500px)" );
+        mq = window.matchMedia("(max-width: 500px)");
     
-        planet.scale.x = planet.scale.y = planet.scale.z = 16;
+    planet.scale.x = planet.scale.y = planet.scale.z = 16;
+    circle.add(planet);
+
+    planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
+    skelet.add(planet2);
+       
+    if (mq.matches) {
+        planet.scale.x = planet.scale.y = planet.scale.z = 13;
         circle.add(planet);
 
-        planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
+        planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
         skelet.add(planet2);
-       
-    if (mq.matches){
-        planet.scale.x = planet.scale.y = planet.scale.z = 13;
-            circle.add(planet);
-
-            planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
-            skelet.add(planet2);
     }
     
-
     scene.add(ambientLight);
   
-    
     lights[0] = new THREE.DirectionalLight(0xffffff, 1);
     lights[0].position.set(1, 0, 0);
     lights[1] = new THREE.DirectionalLight(0x11E8BB, 1);
@@ -77,6 +77,7 @@ function init() {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
+            
         if (mq.matches) {
             planet.scale.x = planet.scale.y = planet.scale.z = 13;
             circle.add(planet);
@@ -91,9 +92,8 @@ function init() {
             skelet.add(planet2);
         }
     }
+        
     window.addEventListener('resize', onWindowResize, false);
-
-    
 }
 
 function animate() {
@@ -115,8 +115,11 @@ window.onload = function () {
     animate();
 };
 
+
 $(function () {
     "use strict";
+/* =================================================================== TYPED ====================================================================== */
+    
     $(".element").typed({
         strings: ["Bienvenue sur Jupiter,", "cliquez sur les points repère pour explorer la planète."],
         typeSpeed: 30
@@ -131,9 +134,9 @@ $(function () {
         }
     });
     
-/****** INFOS PLANET *********/
+/* =================================================================== INFOS PLANET ====================================================================== */
     
-    /***MASSE***/
+    /* ==================== MASSE ========================== */
     function openMasse() {
         $('#masseInfos').css('display', 'block');
         $('#masseInfos').animate({opacity : 1});
@@ -154,7 +157,7 @@ $(function () {
         closeMasse();
     });
     
-    /***TEMPERATURE***/
+    /* ===================== TEMPERATURE ==================== */
     function openTemp() {
         $('#tempInfos').css('display', 'block');
         $('#tempInfos').animate({opacity : 1});
@@ -175,7 +178,7 @@ $(function () {
         closeTemp();
     });
     
-    /***GRAVITE***/
+    /* ======================== GRAVITE =================== */
     function openGrav() {
         $('#graviteInfos').css('display', 'block');
         $('#graviteInfos').animate({opacity : 1});
@@ -196,7 +199,7 @@ $(function () {
         closeGrav();
     });
     
-    /***IDCARD***/
+    /* ========================== IDCARD =================== */
     function openId() {
         $('#idInfos').css('display', 'block');
         $('#idInfos').animate({opacity : 1});
@@ -219,64 +222,98 @@ $(function () {
     $('#closeId').click(function () {
         closeId();
     });
-});
 
+/* =================================================================== ASIDE ====================================================================== */
+    var	$parent = $("#wrapper"),
+        $aside = $("#aside"),
+        $asideTarget = $aside.find(".aside--details"),
+        $asideClose = $aside.find(".close"),
+        $buttonParent = $(".pointer"),
+        $button = $buttonParent.find(".more"),
+        slideClass = "show-detail";
 
-var	$parent = $("#wrapper"),
-    $aside = $("#aside"),
-    $asideTarget = $aside.find(".aside--details"),
-    $asideClose = $aside.find(".close"),
-    $buttonParent = $(".pointer"),
-    $button = $buttonParent.find(".more"),
-    slideClass = "show-detail";
-
-function showAside() {
-    "use strict";
-    if (!$("html").hasClass(slideClass)) {
-        $("html").toggleClass(slideClass);
+    function showAside() {
+        if (!$("html").hasClass(slideClass)) {
+            $("html").toggleClass(slideClass);
+        }
     }
-}
 
-function loadPlanetData(target) {
-    "use strict";
-    var $this = $(target),
-        itemHtml = $this.find(".details").html();
-    $asideTarget.html(itemHtml);
-    showAside();
-}
-
-		
-function killAside() {
-    "use strict";
-    if ($("html").hasClass(slideClass)) {
-        $("html").removeClass(slideClass);
+    function loadPlanetData(target) {
+        var $this = $(target),
+            itemHtml = $this.find(".details").html();
+        $asideTarget.html(itemHtml);
+        showAside();
     }
-}
+	
+    function killAside() {
+        if ($("html").hasClass(slideClass)) {
+            $("html").removeClass(slideClass);
+        }
+    }
 
-$button.on("click", function (e) {
-    "use strict";
-    e.preventDefault();
-	e.stopPropagation();
-	if (!$("html").hasClass(slideClass)) {
-        $button.removeClass("active");
-        $(this).addClass("active");
-        $(this).attr("true");
-        loadPlanetData($(this));
-    } else {
+    $button.on("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!$("html").hasClass(slideClass)) {
+            $button.removeClass("active");
+            $(this).addClass("active");
+            $(this).attr("true");
+            loadPlanetData($(this));
+        } else {
+            killAside();
+            $(this).attr("false");
+        }
+    });
+
+    $asideClose.on("click", function (e) {
+        e.preventDefault();
         killAside();
-        $(this).attr("false");
-    }
-});
+    });
 
-$asideClose.on("click", function (e) {
-    "use strict";
-    e.preventDefault();
-    killAside();
-});
-
-$parent.on("click", function (e) {
-    "use strict";
-    if ($("html").hasClass(slideClass)) {
-        killAside();
+    $parent.on("click", function (e) {
+        if ($("html").hasClass(slideClass)) {
+            killAside();
+        }
+    });
+    
+    $aside.scroll(function () {
+        if ($(this).scrollTop() > 0) {
+            $('.scroll').fadeOut();
+        } else {
+            $('.scroll').fadeIn();
+        }
+    }); 
+    
+    
+    function next () {
+        $('#next').animate({opacity: 1}, .2)
     }
+    
+    function nextOut () {
+        $('#next').animate({opacity: 0}, .2)
+    }
+    
+    $('#rightArrow').mouseover(function() {
+       next();
+    });
+    
+    $('#rightArrow').mouseout(function() {
+        nextOut();
+    });
+    
+    function prev () {
+        $('#prev').animate({opacity: 1}, .2);
+    }
+    
+    function prevOut () {
+        $('#prev').animate({opacity: 0}, .2);
+    }
+    
+    $('#leftArrow').mouseover(function() {
+        prev();
+    });
+    
+    $('#leftArrow').mouseout(function() {
+        prevOut();
+    });
 });

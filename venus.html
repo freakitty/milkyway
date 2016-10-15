@@ -21,7 +21,7 @@
     <div id="wrapper">
        
         <div id="logo"> <!-- LOGO -->
-            <a href="index.html"><img src="images/logoWhite-icon.png" alt="logo milkywy"></a>
+            <a href="index.html"><img src="images/logoWhite-icon.png" alt="logo milkyway"></a>
         </div><!-- FIN LOGO -->
         
         <h1>venus</h1>
@@ -35,20 +35,22 @@
             <label class="menu-open-button" for="menu-open">
                 <span class="burger"></span>
             </label>
-            <a href="#" class="nav-item">Galaxies</a>
-            <a href="medias.html" class="nav-item">galerie</a>
-                <div class="cntr nav-item">
-	                <div class="cntr-innr">
-                        <label class="search" for="inpt_search">
-			                <input id="inpt_search" type="text"/>
-                        </label>
-	                </div>
-                </div>
-            <a href="#" class="nav-item">histoire</a>
-            <a href="#" class="nav-item">news</a>
-        </nav><!-- FIN MENU -->
+            <a href="index.html" class="nav-item">Galaxie</a>
+            <a href="#" class="nav-item">Univers</a>
+            <a href="medias.html" class="nav-item">Galerie</a>
+            <a href="#" class="nav-item">Histoire</a>
+            <a href="#" class="nav-item">Actus</a>
+        </nav><!-- FIN MENU --> 
         
-        <a href="terre.html">
+        <div class="cntr">
+            <div class="cntr-innr">
+                <label class="search" for="inpt_search">
+                    <input id="inpt_search" type="text"/>
+                </label>
+            </div>
+        </div>
+        
+        <a href="terre.html"><!-- ARROW -->
             <div id="rightArrow">
                <span></span>
                <span></span>
@@ -60,7 +62,16 @@
                <span></span>
                <span></span>
            </div>
-        </a>
+        </a> 
+        
+        <div id="next">
+            Planète suivante
+        </div>
+        
+        <div id="prev">
+            Planète précédente
+        </div>
+        <!-- FIN ARROW -->
         
         <!-- REPERES -->
         <div id="masse"> <!-- masse -->
@@ -146,7 +157,9 @@
                     <div class="more" id="button">
                     En savoir plus
                         <div class="details visually-hidden">
-                            <img src="images/venus.jpg" alt="venus"> 
+                            <img src="images/venus.jpg" alt="venus" class="img"> 
+                            <img src="images/scroll-ico.png" alt="icone scroll" class="scroll Large">
+
                             <div class="wrapper">
                             <h2>VENUS</h2>
                             <hr>
@@ -169,8 +182,8 @@
                             Par ailleurs, des mesures d'émissivité à 1,18 µm réalisées en 2008 ont <b>suggéré une relative abondance des granites et autres roches felsiques sur les terrains les plus élevés </b>— qui sont généralement les plus anciens — de la planète, <b>ce qui impliquerait l'existence passée d'un océan global</b> assorti d'un mécanisme de recyclage de l'eau dans le manteau susceptible d'avoir produit de telles roches. À l'instar de Mars, Vénus aurait ainsi peut-être connu, il y a plusieurs milliards d'années, des conditions tempérées permettant l'existence d'eau liquide en surface, eau aujourd'hui disparue — par évaporation puis dissociation photochimique dans la haute atmosphère — au point de faire de cette planète l'une des plus sèches du Système solaire.
                             <br><br>
                             La planète Vénus a été baptisée du nom de la déesse Vénus de la féminité et de l'amour physique dans la mythologie romaine. Elle était déjà connue des Babyloniens à l'Âge du bronze, associée à la déesse Ishtar de la mythologie mésopotamienne.</p>
+                            <img src="images/print-icon.png" alt="impression" id="print">
                             <p>
-                            <br><br>
                             <b>Caractéristiques orbitales</b></p>
                             <br>
                             <hr>
@@ -307,7 +320,10 @@
             
             </div>
             
-            
+        </div>
+        
+        <div id="exoskelet">
+            exosquelette comparatif de Jupiter
         </div>
         
         <div id="venus"></div>
@@ -319,12 +335,11 @@
         </footer>
         
     </div>
-        <aside id="aside">
-	<a href="#" class="close"><img src="images/gallery/closeGallery.png" alt="Close button"></a>
-	<div class="aside--details">
-		
-	</div>
-</aside>
+    <aside id="aside">
+	    <a href="#" class="close"><img src="images/gallery/closeGallery.png" alt="Close button"></a>
+	    <div class="aside--details">
+	    </div>
+    </aside>
    
     <script src="js/jquery.js"></script>
     <script src="js/TweenMax.min.js"></script>

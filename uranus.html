@@ -21,7 +21,7 @@
     <div id="wrapper">
     
         <div id="logo"> <!-- LOGO -->
-            <a href="index.html"><img src="images/logoWhite-icon.png" alt="logo milkywy"></a>
+            <a href="index.html"><img src="images/logoWhite-icon.png" alt="logo milkyway"></a>
         </div><!-- FIN LOGO -->
         
         <h1>uranus</h1>
@@ -31,24 +31,26 @@
         </div> <!-- FIN ACCROCHE -->
         
         <nav class="float-menu"><!-- MENU -->
-            <input type="checkbox" class="menu-open" id="menu-open" />
+            <input type="checkbox" class="menu-open" id="menu-open"/>
             <label class="menu-open-button" for="menu-open">
                 <span class="burger"></span>
             </label>
-            <a href="#" class="nav-item">Galaxies</a>
-            <a href="medias.html" class="nav-item">médias</a>
-                <div class="cntr nav-item">
-	                <div class="cntr-innr">
-                        <label class="search" for="inpt_search">
-			                <input id="inpt_search" type="text"/>
-                        </label>
-	                </div>
-                </div>
-            <a href="#" class="nav-item">histoire</a>
-            <a href="#" class="nav-item">news</a>
-        </nav><!-- FIN MENU -->
+            <a href="index.html" class="nav-item">Galaxie</a>
+            <a href="#" class="nav-item">Univers</a>
+            <a href="medias.html" class="nav-item">Galerie</a>
+            <a href="#" class="nav-item">Histoire</a>
+            <a href="#" class="nav-item">Actus</a>
+        </nav><!-- FIN MENU --> 
         
-        <a href="neptune.html">
+        <div class="cntr">
+            <div class="cntr-innr">
+                <label class="search" for="inpt_search">
+                    <input id="inpt_search" type="text"/>
+                </label>
+            </div>
+        </div>
+        
+        <a href="neptune.html"><!-- ARROW -->
             <div id="rightArrow">
                <span></span>
                <span></span>
@@ -61,6 +63,14 @@
                <span></span>
            </div>
         </a>
+        
+        <div id="next">
+            Planète suivante
+        </div>
+        <div id="prev">
+            Planète précédente
+        </div>
+        <!-- FIN ARROW -->
         
          <!-- REPERES -->
         <div id="masse"> <!-- masse -->
@@ -146,7 +156,8 @@
                     <div class="more" id="button">
                     En savoir plus
                         <div class="details visually-hidden">
-                            <img src="images/uranus.jpg" alt="uranus"> 
+                            <img src="images/uranus.jpg" alt="uranus" class="img"> 
+                            <img src="images/scroll-ico.png" alt="icone scroll" class="scroll Large">
                             <div class="wrapper">
                             <h2>URANUS</h2>
                             <hr>
@@ -157,8 +168,8 @@
                             À l’instar des autres géantes gazeuses, <b>Uranus a un système d’anneaux,</b> une magnétosphère et de nombreux satellites naturels. Le système uranien est unique dans le Système solaire car son axe de rotation est pratiquement dans son plan de révolution autour du Soleil ; <b>les pôles nord et sud sont situés où les autres planètes ont leur équateur.</b> En 1986, les images de Voyager 2 ont montré Uranus comme une planète sans caractéristique particulière en lumière visible. De même, les bandes nuageuses ou tempêtes observées sur les autres planètes gazeuses ne semblent pas présentes ici. Cette visite de la sonde se produisit près du solstice, l'hémisphère éclairé était alors principalement son hémisphère austral.
                             <br><br>
                             Cependant, les observateurs terrestres ainsi que le télescope spatial Hubble ont depuis constaté des signes de changements saisonniers et une augmentation de l’activité météorologique ces dernières années, Uranus approchant alors de son équinoxe, qu'il a atteint le 8 décembre 2007.</p>
+                            <img src="images/print-icon.png" alt="impression" id="print">
                             <p>
-                            <br><br>
                             <b>Caractéristiques orbitales</b></p>
                             <br>
                             <hr><p>
@@ -290,6 +301,10 @@
             
         </div>
         
+        <div id="exoskelet">
+            exosquelette comparatif de Jupiter
+        </div>
+        
         <div id="uranus"></div>
         
         <footer>
@@ -301,11 +316,10 @@
     </div>
     
     <aside id="aside">
-	<a href="#" class="close"><img src="images/gallery/closeGallery.png" alt="Close button"></a>
-	<div class="aside--details">
-		
-	</div>
-</aside>
+	    <a href="#" class="close"><img src="images/gallery/closeGallery.png" alt="Close button"></a>
+	    <div class="aside--details">
+	    </div>
+    </aside>
    
     <script src="js/jquery.js"></script>
     <script src="js/TweenMax.min.js"></script>

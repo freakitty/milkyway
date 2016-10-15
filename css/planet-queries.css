@@ -1,22 +1,19 @@
-@media screen and (min-width:801px){ 
-
+@media screen and (min-width:1500px){
+    .Large{bottom: 150px;}
 }
-
-@media screen and (max-width:1280px){
-}
-
-@media screen and (max-width:1080px){
+@media screen and (min-width:1700px){
+    .Large{bottom: 300px;}
 }
 
 @media screen and (max-width:960px){
     .mainText{column-count: 1;}
 }
-@media screen and (max-width:800px){ 
-    
-}
+
 @media screen and (max-width:768px){
-    #rightArrow{top: 85%;}
-    #leftArrow{top: 85%;}
+    #rightArrow{top: 78%;}
+    #leftArrow{top: 78%;}
+    #next{top: 95%;}
+    #prev{top: 95%;}
     .line{width: 200px;}
     #masse{width: 200px;}
     #massePointer{top: -60px;}
@@ -28,24 +25,20 @@
     #idPointer{left: 200px; top:20px; }
     #idInfos{top: -267px; left: -380px;}
     .wrapper{font-size: 0.8em;}
+    #print{width: 40px; left: 87%}
+    .scroll{width: 20px;}
 }
 
 @media screen and (max-width:600px){
-    #rightArrow{right: 55px;}
+    #rightArrow{right: 50px;}
     #rightArrow span{width: 50px; height: 9px;}
     #leftArrow span{width: 50px; height: 9px;}
-    #rightArrow span:first-child{
-    transform: translateY(-15px) rotate(45deg);
-}
-#rightArrow span:last-child{
-    transform:translateY(15px) rotate(-45deg);
-}
-    #leftArrow span:first-child{
-    transform: translateY(-15px) rotate(135deg);
-}
-#leftArrow span:last-child{
-    transform:translateY(15px) rotate(-135deg);
-}
+    #next{top: 92%; right: 50px;}
+    #prev{top: 92%; left: 50px;}
+    #rightArrow span:first-child{transform: translateY(-15px) rotate(45deg); -webkit-transform: translateY(-15px) rotate(45deg); -moz-transform: translateY(-15px) rotate(45deg); -ms-transform: translateY(-15px) rotate(45deg); -o-transform: translateY(-15px) rotate(45deg);}
+    #rightArrow span:last-child{transform:translateY(15px) rotate(-45deg); -webkit-transform:translateY(15px) rotate(-45deg); -moz-transform:translateY(15px) rotate(-45deg); -ms-transform:translateY(15px) rotate(-45deg); -o-transform:translateY(15px) rotate(-45deg);}
+    #leftArrow span:first-child{transform: translateY(-15px) rotate(135deg); -webkit-transform: translateY(-15px) rotate(135deg);-moz-transform: translateY(-15px) rotate(135deg); -ms-transform: translateY(-15px) rotate(135deg); -o-transform: translateY(-15px) rotate(135deg);}
+    #leftArrow span:last-child{transform:translateY(15px) rotate(-135deg); -webkit-transform:translateY(15px) rotate(-135deg); -moz-transform:translateY(15px) rotate(-135deg); -ms-transform:translateY(15px) rotate(-135deg); -o-transform:translateY(15px) rotate(-135deg);}
     #graviteInfos{margin: 10px -120px;}
     #closeGravite{left: 48px;}
     #tempInfos{margin: 10px -50px;}
@@ -57,10 +50,11 @@
 }
 
 @media screen and (min-width:480px){
-    #logo a img:hover{
-    transform: translateY(10px);
+    #logo a img:hover{transform: translateY(10px); -webkit-transform: translateY(10px); -moz-transform: translateY(10px); -ms-transform: translateY(10px); -o-transform: translateY(10px);}
+    footer{width: 320px;}
+    
 }
-}
+
 @media screen and (max-width:480px){
     #logo{top: 5px;}
     #logo a img{width: 50px;}
@@ -80,33 +74,28 @@
     .element{font-size:0.7em;}
     #typing{left: 20%;}
    footer{width: 290px;}
+    #aside{width: 80%;}
+    .show-detail #wrapper {
+    -webkit-transform: translateX(-80%);
+    -moz-transform: translateX(-80%);
+    -ms-transform: translateX(-80%);
+    -o-transform: translateX(-80%);
+    transform: translateX(-80%);
+        }
+    #next{width: 100px; height: 13px; font-size: 0.5em; top: 94%; right: 70px; background-color: rgba(255,255,255,0); color: #fff;}
+    #prev{width: 100px; height: 13px; font-size: 0.5em; top: 94%; left: 70px; background-color: rgba(255,255,255,0); color: #fff;}
+    #exoskelet, #exoskeletJ{top: 73%;}
+    
 }
 
 @media screen and (max-width:400px){
     .nav-item, .menu-open-button {width: 40px; height: 40px; top: 10px; right: 20px;}
-    .menu-open:checked ~ .nav-item:nth-child(3) {
-    -webkit-transform: translate3d(0, 40px, 0);
-    transform: translate3d(0, 40px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(4) {
-    -webkit-transform: translate3d(0, 90px, 0);
-    transform: translate3d(0, 90px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(5) {
-    -webkit-transform: translate3d(0, 140px, 0);
-    transform: translate3d(0, 140px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(6) {
-    -webkit-transform: translate3d(0, 190px, 0);
-    transform: translate3d(0, 190px, 0);
-}
-.menu-open:checked ~ .nav-item:nth-child(7) {
-    -webkit-transform: translate3d(0, 240px, 0);
-    transform: translate3d(0, 240px, 0);
-}
-    .burger{
-        width: 60px;
-    }
+    .menu-open:checked ~ .nav-item:nth-child(3) {-webkit-transform: translate3d(0, 40px, 0); transform: translate3d(0, 40px, 0); -moz-transform: translate3d(0, 40px, 0); -ms-transform: translate3d(0, 40px, 0); -o-transform: translate3d(0, 40px, 0);}
+    .menu-open:checked ~ .nav-item:nth-child(4) {-webkit-transform: translate3d(0, 90px, 0); transform: translate3d(0, 90px, 0); -moz-transform: translate3d(0, 90px, 0); -ms-transform: translate3d(0, 90px, 0); -o-transform: translate3d(0, 90px, 0);}
+    .menu-open:checked ~ .nav-item:nth-child(5) {-webkit-transform: translate3d(0, 140px, 0); transform: translate3d(0, 140px, 0); -moz-transform: translate3d(0, 140px, 0); -ms-transform: translate3d(0, 140px, 0); -o-transform: translate3d(0, 140px, 0);}
+    .menu-open:checked ~ .nav-item:nth-child(6) {-webkit-transform: translate3d(0, 190px, 0); transform: translate3d(0, 190px, 0); -moz-transform: translate3d(0, 190px, 0); -ms-transform: translate3d(0, 190px, 0); -o-transform: translate3d(0, 190px, 0);}
+    .menu-open:checked ~ .nav-item:nth-child(7) {-webkit-transform: translate3d(0, 240px, 0); transform: translate3d(0, 240px, 0); -moz-transform: translate3d(0, 240px, 0); -ms-transform: translate3d(0, 240px, 0); -o-transform: translate3d(0, 240px, 0);}
+    .burger{width: 60px;}
     .nav-item{line-height: 17px;font-size: 7px;}
     .search{width: 20px; height: 20px;}
     .search:after{top: 14px; left: 17px; height: 10px;}
@@ -126,9 +115,10 @@
     #graviteInfos{width: 165px; margin: 10px -105px;}
     #idInfos{width: 250px; left: -242px; top: -220px;}
     #closeId{left: 240px;}
-    h1{font-size: 1em;}
-    
+    h1{font-size: 1em;} 
+    #print{left: 85%;}
 }
+
 @media screen and (max-width:320px){
     .line{width: 100px;}
     #masse{width: 100px; top: 42%;}
@@ -147,8 +137,17 @@
     .infosPlanet{padding: 6px;}
     .element{font-size: 0.6em;}
     #typing{left: 24%;}
+    #next{width: 65px; height: 27px; top: 86%; right: 15px; border-radius: 70px; line-height: 1.4; padding-top: 2px}
+    #prev{width: 65px; height: 27px; top: 86%; left: 15px; border-radius: 70px; line-height: 1.4; padding-top: 2px; }
+    #exoskelet, #exoskeletJ{top: 72%; font-size: 0.5em; width: 90px; height: 30px;}
+    #print{left: 80%;top: -8px;}
+    #rightArrow{right: 10px;}
+    #leftArrow{left: 35px;}
 }
+
 @media screen and (max-height:480px){
     h1{top: 15%;}
     #typing{top: 19%}
+    #rightArrow{top: 70%;}
+    #leftArrow{top: 70%;}
 }

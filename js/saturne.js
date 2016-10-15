@@ -1,11 +1,6 @@
 /*global $, jQuery, TweenMax, THREE*/
+/* =================================================================== PLANET ====================================================================== */
 var renderer, scene, camera, composer, circle, skelet, particle;
-
-window.onload = function () {
-    "use strict";
-    init();
-    animate();
-};
 
 function init() {
     "use strict";
@@ -60,7 +55,7 @@ function init() {
         planet2 = new THREE.Mesh(geom2, mat2),
         ambientLight = new THREE.AmbientLight(0x999999),
         lights = [],
-        mq = window.matchMedia( "(max-width: 500px)" );
+        mq = window.matchMedia("(max-width: 500px)");
     
     planet.scale.x = planet.scale.y = planet.scale.z = 16;
     circle.add(planet);
@@ -69,11 +64,10 @@ function init() {
     planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
     skelet.add(planet2);
     
-     if (mq.matches){
-        planet.scale.x = planet.scale.y = planet.scale.z = 13;
+     if (mq.matches) {
+         planet.scale.x = planet.scale.y = planet.scale.z = 13;
 
-            planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
-
+         planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
 
     }
 
@@ -96,18 +90,15 @@ function onWindowResize() {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
     if (mq.matches) {
-            planet.scale.x = planet.scale.y = planet.scale.z = 13;
-
-            planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
-
+        planet.scale.x = planet.scale.y = planet.scale.z = 13;
+        planet2.scale.x = planet2.scale.y = planet2.scale.z = 8;
         mesh.position.multiplyScalar(120 + (Math.random() * 120));
 
-        } else {
-            planet.scale.x = planet.scale.y = planet.scale.z = 16;
-
-            planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
-            mesh.position.multiplyScalar(150 + (Math.random() * 100));
-        }
+    } else {
+        planet.scale.x = planet.scale.y = planet.scale.z = 16;
+        planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
+        mesh.position.multiplyScalar(150 + (Math.random() * 100));
+    }
 }
     
     window.addEventListener('resize', onWindowResize, false);
@@ -129,15 +120,24 @@ function animate() {
     renderer.render(scene, camera);
 }
 
+window.onload = function () {
+    "use strict";
+    init();
+    animate();
+};
+
+
 
 $(function () {
     "use strict";
+/* =================================================================== TYPED ====================================================================== */
+    
     $(".element").typed({
         strings: ["Bienvenue sur Saturne,", "cliquer sur les points repère pour explorer la planète."],
         typeSpeed: 30
     });
     $("#inpt_search").on('focus', function () {
-	   $(this).parent('label').addClass('active');
+        $(this).parent('label').addClass('active');
     });
 
     $("#inpt_search").on('blur', function () {
@@ -145,13 +145,14 @@ $(function () {
             $(this).parent('label').removeClass('active');
         }
     });
-        /****** INFOS PLANET *********/
     
-    /***MASSE***/
+/* =================================================================== INFOS PLANET ====================================================================== */
+    
+    /* ========= MASSE ========== */
     function openMasse() {
         $('#masseInfos').css('display', 'block');
         $('#masseInfos').animate({opacity : 1});
-        $('#closeMasse').css('display','block');
+        $('#closeMasse').css('display', 'block');
         $('#closeMasse').animate({opacity : 1});
         
     }
@@ -161,7 +162,7 @@ $(function () {
     function closeMasse() {
         $('#masseInfos').css('display', 'none');
         $('#masseInfos').animate({opacity : 0});
-        $('#closeMasse').css('display','none');
+        $('#closeMasse').css('display', 'none');
         $('#closeMasse').animate({opacity : 0});
     }
     $('#closeMasse').click(function () {
@@ -172,7 +173,7 @@ $(function () {
     function openTemp() {
         $('#tempInfos').css('display', 'block');
         $('#tempInfos').animate({opacity : 1});
-        $('#closeTemp').css('display','block');
+        $('#closeTemp').css('display', 'block');
         $('#closeTemp').animate({opacity : 1});
         
     }
@@ -189,11 +190,11 @@ $(function () {
         closeTemp();
     });
     
-    /***GRAVITE***/
+    /* ================== GRAVITE ================ */
     function openGrav() {
         $('#graviteInfos').css('display', 'block');
         $('#graviteInfos').animate({opacity : 1});
-        $('#closeGravite').css('display','block');
+        $('#closeGravite').css('display', 'block');
         $('#closeGravite').animate({opacity : 1});
         
     }
@@ -210,7 +211,7 @@ $(function () {
         closeGrav();
     });
     
-    /***IDCARD***/
+    /* ============= IDCARD ======================*/
     function openId() {
         $('#idInfos').css('display', 'block');
         $('#idInfos').animate({opacity : 1});
@@ -227,70 +228,105 @@ $(function () {
     function closeId() {
         $('#idInfos').css('display', 'none');
         $('#idInfos').animate({opacity : 0});
-        $('#closeId').css('display','none');
+        $('#closeId').css('display', 'none');
         $('#closeId').animate({opacity : 0});
     }
     $('#closeId').click(function () {
         closeId();
     });
-});
 
+/* =================================================================== ASIDE ====================================================================== */
 
-var	$parent = $("#wrapper"),
-    $aside = $("#aside"),
-    $asideTarget = $aside.find(".aside--details"),
-    $asideClose = $aside.find(".close"),
-    $buttonParent = $(".pointer"),
-    $button = $buttonParent.find(".more"),
-    slideClass = "show-detail";
+    var	$parent = $("#wrapper"),
+        $aside = $("#aside"),
+        $asideTarget = $aside.find(".aside--details"),
+        $asideClose = $aside.find(".close"),
+        $buttonParent = $(".pointer"),
+        $button = $buttonParent.find(".more"),
+        slideClass = "show-detail";
 
-function showAside() {
-    "use strict";
-    if (!$("html").hasClass(slideClass)) {
-        $("html").toggleClass(slideClass);
+    function showAside() {
+        if (!$("html").hasClass(slideClass)) {
+            $("html").toggleClass(slideClass);
+        }
     }
-}
 
-function loadPlanetData(target) {
-    "use strict";
-    var $this = $(target),
-        itemHtml = $this.find(".details").html();
-    $asideTarget.html(itemHtml);
-    showAside();
-}
+    function loadPlanetData(target) {
+        var $this = $(target),
+            itemHtml = $this.find(".details").html();
+        $asideTarget.html(itemHtml);
+        showAside();
+    }
 
 		
-function killAside() {
-    "use strict";
-    if ($("html").hasClass(slideClass)) {
-        $("html").removeClass(slideClass);
+    function killAside() {
+        if ($("html").hasClass(slideClass)) {
+            $("html").removeClass(slideClass);
+        }
     }
-}
 
-$button.on("click", function (e) {
-    "use strict";
-    e.preventDefault();
-	e.stopPropagation();
-	if (!$("html").hasClass(slideClass)) {
-        $button.removeClass("active");
-        $(this).addClass("active");
-        $(this).attr("true");
-        loadPlanetData($(this));
-    } else {
+    $button.on("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!$("html").hasClass(slideClass)) {
+            $button.removeClass("active");
+            $(this).addClass("active");
+            $(this).attr("true");
+            loadPlanetData($(this));
+        } else {
+            killAside();
+            $(this).attr("false");
+        }
+    });
+
+    $asideClose.on("click", function (e) {
+        e.preventDefault();
         killAside();
-        $(this).attr("false");
-    }
-});
+    });
 
-$asideClose.on("click", function (e) {
-    "use strict";
-    e.preventDefault();
-    killAside();
-});
-
-$parent.on("click", function (e) {
-    "use strict";
-    if ($("html").hasClass(slideClass)) {
-        killAside();
+    $parent.on("click", function (e) {
+        if ($("html").hasClass(slideClass)) {
+            killAside();
+        }
+    });
+    
+    $aside.scroll(function () {
+        if ($(this).scrollTop() > 0) {
+            $('.scroll').fadeOut();
+        } else {
+            $('.scroll').fadeIn();
+        }
+    }); 
+    
+    function next () {
+        $('#next').animate({opacity: 1}, .2)
     }
+    
+    function nextOut () {
+        $('#next').animate({opacity: 0}, .2)
+    }
+    
+    $('#rightArrow').mouseover(function() {
+       next();
+    });
+    
+    $('#rightArrow').mouseout(function() {
+        nextOut();
+    });
+    
+    function prev () {
+        $('#prev').animate({opacity: 1}, .2);
+    }
+    
+    function prevOut () {
+        $('#prev').animate({opacity: 0}, .2);
+    }
+    
+    $('#leftArrow').mouseover(function() {
+        prev();
+    });
+    
+    $('#leftArrow').mouseout(function() {
+        prevOut();
+    });
 });

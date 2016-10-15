@@ -21,7 +21,7 @@
     <div id="wrapper">
        
         <div id="logo"> <!-- LOGO -->
-            <a href="index.html"><img src="images/logoWhite-icon.png" alt="logo milkywy"></a>
+            <a href="index.html"><img src="images/logoWhite-icon.png" alt="logo milkyway"></a>
         </div><!-- FIN LOGO -->
     
        <h1>mars</h1>
@@ -35,25 +35,31 @@
             <label class="menu-open-button" for="menu-open">
                 <span class="burger"></span>
             </label>
-            <a href="#" class="nav-item">Galaxies</a>
-            <a href="medias.html" class="nav-item">galerie</a>
-                <div class="cntr nav-item">
-	                <div class="cntr-innr">
-                        <label class="search" for="inpt_search">
-			                <input id="inpt_search" type="text"/>
-                        </label>
-	                </div>
-                </div>
-            <a href="#" class="nav-item">histoire</a>
-            <a href="#" class="nav-item">news</a>
-        </nav><!-- FIN MENU -->
+            <a href="index.html" class="nav-item">Galaxie</a>
+            <a href="#" class="nav-item">Univers</a>
+            <a href="medias.html" class="nav-item">Galerie</a>
+            <a href="#" class="nav-item">Histoire</a>
+            <a href="#" class="nav-item">Actus</a>
+        </nav><!-- FIN MENU --> 
         
-        <a href="jupiter.html">
+        <div class="cntr">
+            <div class="cntr-innr">
+                <label class="search" for="inpt_search">
+                    <input id="inpt_search" type="text"/>
+                </label>
+            </div>
+        </div>
+        
+        <a href="jupiter.html"><!-- ARROW -->
             <div id="rightArrow">
                <span></span>
                <span></span>
            </div>
         </a>
+        
+        <div id="next">
+            Planète suivante
+        </div>
         
         <a href="terre.html">
             <div id="leftArrow">
@@ -61,6 +67,10 @@
                <span></span>
            </div>
         </a>
+        <div id="prev">
+            Planète précédente
+        </div>
+        <!-- FIN ARROW -->
         
          <!-- REPERES -->
         <div id="masse"> <!-- masse -->
@@ -146,8 +156,9 @@
                     <div class="more" id="button">
                     En savoir plus
                         <div class="details visually-hidden">
-                            <img src="images/mars.jpg" alt="mars"> 
-                            <div class="wrapper">
+                            <img src="images/mars.jpg" alt="mars" class="img"> 
+                            <img src="images/scroll-ico.png" alt="icone scroll" class="scroll">
+                            <div class="wrapper">  
                             <h2>MARS</h2>
                             <hr>
                             <p class="mainText">Mars (prononcé en français : /maʁs/) est la quatrième planète par ordre de distance croissante au Soleil et la deuxième par masse et par taille croissantes sur les huit planètes que compte le Système solaire. Son éloignement au Soleil est compris entre 1,381 et 1,666 UA (206,6 à 249,2 millions de kilomètres), avec une période orbitale de 686,71 jours terrestres.
@@ -167,8 +178,8 @@
                             Mars possède deux petits satellites naturels, <b>Phobos et Déimos.</b>
                             <br><br>
                             Le 28 septembre 2015, la Nasa annonce y avoir détecté des écoulements de « saumures de différentes compositions, faites de chlorate et perchlorate de magnésium et de perchlorate de sodium, mêlés à un peu d’eau. ».</p>
+                            <img src="images/print-icon.png" alt="impression" id="print">
                            <p>
-                              <br><br>
                                <b>Caractéristiques orbitales</b></p>
                                <br>
                                <hr><p>
@@ -322,6 +333,11 @@
             
             
         </div>
+        
+        <div id="exoskelet">
+            exosquelette comparatif de Jupiter
+        </div>
+        
         
         <div id="mars"></div>
         

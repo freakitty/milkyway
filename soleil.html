@@ -20,39 +20,48 @@
 <body>
    <div id="wrapper">
    
-    <div id="logo"> <!-- LOGO -->
-        <a href="index.html"><img src="images/logoWhite-icon.png" alt="logo milkyway"></a>
-    </div>
+        <div id="logo"> <!-- LOGO -->
+            <a href="index.html"><img src="images/logoWhite-icon.png" alt="logo milkyway"></a>
+        </div>
     
-    <h1>Soleil</h1>
+        <h1>Soleil</h1>
     
-    <div id="typing"> <!-- ACCROCHE -->
+        <div id="typing"> <!-- ACCROCHE -->
             <span class="element"></span>
         </div> <!-- FIN ACCROCHE -->
         
-    <nav class="float-menu">
+        <nav class="float-menu"> <!-- MENU -->
             <input type="checkbox" class="menu-open" id="menu-open" />
             <label class="menu-open-button" for="menu-open">
                 <span class="burger"></span>
             </label>
-            <a href="#" class="nav-item">Galaxies</a>
-            <a href="medias.html" class="nav-item">galerie</a>
-                <div class="cntr nav-item">
-	                <div class="cntr-innr">
-                        <label class="search" for="inpt_search">
-			                <input id="inpt_search" type="text"/>
-                        </label>
-	                </div>
-                </div>
-            <a href="#" class="nav-item">histoire</a>
-            <a href="#" class="nav-item">news</a>
-        </nav>
-        <a href="mercure.html">
+            <a href="index.html" class="nav-item">Galaxie</a>
+            <a href="#" class="nav-item">Univers</a>
+            <a href="medias.html" class="nav-item">Galerie</a>
+            <a href="#" class="nav-item">Histoire</a>
+            <a href="#" class="nav-item">Actus</a>
+        </nav><!-- FIN MENU --> 
+        
+        <div class="cntr">
+            <div class="cntr-innr">
+                <label class="search" for="inpt_search">
+                    <input id="inpt_search" type="text"/>
+                </label>
+            </div>
+        </div>
+        
+        <a href="mercure.html"> <!-- ARROW -->
             <div id="rightArrow">
                <span></span>
                <span></span>
            </div>
-        </a>
+        </a> 
+        
+        <div id="next">
+            Planète suivante
+        </div>
+        
+        <!-- FIN ARROW -->
         
          <!-- REPERES -->
         <div id="masse"> <!-- masse -->
@@ -137,7 +146,8 @@
                     <div class="more" id="button">
                         <p>En savoir plus</p>
                         <div class="details visually-hidden">
-                            <img src="images/soleil.jpg" alt="soleil"> 
+                            <img src="images/soleil.jpg" alt="soleil" class="img"> 
+                            <img src="images/scroll-ico.png" alt="icone scroll" class="scroll Large">
                             <div class="wrapper">
                             <h2>SOLEIL</h2>
                             <hr>
@@ -148,8 +158,8 @@
                             Le rayonnement solaire est aussi <b>responsable des climats</b> et de la plupart des phénomènes météorologiques observés sur la Terre. En effet, le bilan radiatif global de la Terre est tel que la densité thermique à la surface de la Terre est en moyenne à 99,97 % ou 99,98 % d’origine solaire. Comme pour tous les autres corps, ces <b>flux thermiques sont continuellement émis dans l’espace</b>, sous forme de rayonnement thermique infrarouge ; la Terre restant ainsi en « équilibre dynamique ».
                             <br><br>
                             Le demi-grand axe de l’orbite de la Terre autour du Soleil, couramment appelé « distance de la Terre au Soleil », égal à <b>149 597 870 700 m ± 3 m, est la définition originale de l’unité astronomique (ua)</b>. Il faut 8 minutes et 19 secondes pour que la lumière du Soleil parvienne jusqu’à la Terre.</p>
+                            <img src="images/print-icon.png" alt="impression" id="print">
                             <p>
-                            <br><br>
                             <b>Données observées</b></p>
                             <br>
                             <hr><p>
@@ -284,11 +294,10 @@
     </div>
     
     <aside id="aside">
-	<a href="#" class="close"><img src="images/gallery/closeGallery.png" alt="Close button"></a>
-	<div class="aside--details">
-		
-	</div>
-</aside>
+	    <a href="#" class="close"><img src="images/gallery/closeGallery.png" alt="Close button"></a>
+	    <div class="aside--details">
+	    </div>
+    </aside>
    
     <script src="js/jquery.js"></script>
     <script src="js/TweenMax.min.js"></script>
