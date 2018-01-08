@@ -19,6 +19,10 @@
     #aside .wrapper{column-count: 2;font-size: 1em;}
 }
 
+@media screen and (min-width:480px){
+    #main{background:url(../images/background.png)no-repeat fixed; background-size: cover;}
+}
+
 @media screen and (max-width:480px){
     #aside{width: 80%;}
     .show-detail #main {

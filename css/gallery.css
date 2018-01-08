@@ -27,7 +27,7 @@ body{font-family: 'Roboto Mono', 'RobotoMono';}
 
 #logo{
     position: absolute;
-    top: 10px;
+    top: 30px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -37,6 +37,8 @@ body{font-family: 'Roboto Mono', 'RobotoMono';}
     z-index: 30;
 }
 
+#logo a img{width: 90%;}
+
 h1{
     position: absolute;
     top: 140px;
@@ -44,6 +46,7 @@ h1{
     text-transform: uppercase;
     font-size: 1.4em;
     font-weight: 500;
+    color: #fff;
 }
 /* =========================================================================  NAVIGATION  ==================================================================== */
 
@@ -69,7 +72,7 @@ h1{
     height: 25px;
     width: 25px;
     box-sizing: border-box;
-    border: 2px solid #000;
+    border: 2px solid #fff;
     border-radius: 25px;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
@@ -86,7 +89,7 @@ h1{
     height: 15px;
     left: 23px;
     top: 18px;
-    background: #000;
+    background: #fff;
     border-radius: 3px;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
@@ -115,7 +118,7 @@ h1{
     width: 100%;
     border: none;
     box-sizing: border-box;
-    color: #000;
+    color: #fff;
     background: transparent;
     outline-width: 0px;
     margin-left: 3px;
@@ -127,8 +130,8 @@ h1{
   box-sizing: border-box;
 }
 
-.nav-item, .menu-open-button {
-    background: #ccc;
+.nav-item, .menu-open-button{
+    background: #fff;
     border-radius: 100%;
     color: #000;
     height: 50px;
@@ -142,14 +145,14 @@ h1{
     -moz-transition: transform ease-out 200ms;
     -ms-transition: transform ease-out 200ms;
     -o-transition: transform ease-out 200ms;
-    transition: transform ease-out 200ms;
+    transition: -transform ease-out 200ms;
 }
 
-.menu-open {
+.menu-open{
     display: none;
 }
 
-.nav-item {
+.nav-item{
     font-size: 8px;
     line-height: 25px;
     padding-top: 12px;
@@ -162,14 +165,11 @@ h1{
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
-.nav-item:hover {
-    background: #999;
-}
-.nav-item img{
-    margin: -6px 5px;
+.nav-item:hover{
+    background: #ccc;
 }
 
-.burger {
+.burger{
     background: #00ffe4;
     display: block;
     height: 5px;
@@ -191,10 +191,10 @@ h1{
     width: 30px;
     position: absolute;
     left: 0;
-    -webkit-transition: transform 200ms;
-    -moz-transition: transform 200ms;
-    -ms-transition: transform 200ms;
-    -o-transition: transform 200ms;
+    -webkit-transition: -transform 200ms;
+    -moz-transition: -transform 200ms;
+    -ms-transition: -transform 200ms;
+    -o-transition: -transform 200ms;
     transition: transform 200ms;
 }
 .burger:before {
@@ -302,7 +302,7 @@ h1{
 }
 .menu-open:checked ~ .nav-item:nth-child(7) {
     -webkit-transition-duration: 590ms;
-    -moz-transition-duration: 590ms;
+     -moz-transition-duration: 590ms;
     -ms-transition-duration: 590ms;
     -o-transition-duration: 590ms;
     transition-duration: 590ms;
@@ -366,14 +366,14 @@ h1{
     max-width: 70%
 }
 .element{
-    color: black;
+    color: white;
     font-size: 0.9em;
 }
 
 /* =========================================================================  GALLERY  ==================================================================== */
 
 #main {
-    background-color: #fff;
+    background-color: #000;
     position: relative;
     z-index: 20;
     padding-top: 220px;
